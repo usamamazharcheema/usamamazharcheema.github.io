@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-time Data Migration - Usama Mazhar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/devcard-style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <img src="images/usama.jpeg" alt="Usama Mazhar" class="profile-img">
+                <h1 class="profile-name">Usama Mazhar</h1>
+                <p class="profile-tagline">Data Engineer</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-user me-2"></i>About Me
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">
+                            <i class="fas fa-briefcase me-2"></i>Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">
+                            <i class="fas fa-file-alt me-2"></i>Resume
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-2"></i>Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="social-links">
+                    <a href="https://github.com/usamamazharcheema" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/usama-mazhar" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:usamamazhar200@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle d-lg-none">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Project Header -->
+        <section class="section-content">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index.html#projects">Projects</a></li>
+                        <li class="breadcrumb-item active">One-time Data Migration</li>
+                    </ol>
+                </nav>
+                
+                <h1 class="section-title">Case Study: One-time Data Migration</h1>
+                
+                <p class="project-detail-intro">
+                    Led a comprehensive data migration project to consolidate data from multiple CRM and support platforms 
+                    (Pipedrive, Planhat, and Intercom) into Salesforce, creating a unified customer data platform for 
+                    improved business operations and customer insights.
+                </p>
+
+                <div class="row">
+                    <!-- Main Content -->
+                    <div class="col-lg-8">
+                        <!-- Client Info -->
+                        <div class="project-section">
+                            <div class="row align-items-stretch">
+                                <div class="col-md-4 mb-4 d-flex">
+                                    <img src="images/project-2.jpg" alt="Casavi GmbH" class="img-fluid rounded shadow-sm w-100" style="object-fit: cover; max-height: 350px;">
+                                </div>
+                                <div class="col-md-8 mb-4 d-flex flex-column">
+                                    <h3 class="mb-3">Casavi GmbH</h3>
+                                    <p class="mb-2"><i class="fas fa-briefcase me-2"></i><strong>Industry:</strong> PropTech</p>
+                                    <p class="mb-2"><i class="fas fa-users me-2"></i><strong>Size:</strong> 100+</p>
+                                    <p class="mb-3"><i class="fas fa-link me-2"></i><strong>Website:</strong> <a href="https://casavi.de" target="_blank">casavi.de</a></p>
+                                    
+                                    <p class="mb-0">
+                                        Casavi needed to consolidate their fragmented customer data across multiple systems into 
+                                        Salesforce as their single source of truth. The migration required careful planning to 
+                                        preserve data integrity, maintain relationships, and minimize business disruption.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <h4 class="mb-3">Project Requirements</h4>
+                            <ul>
+                                <li>Data extraction from Pipedrive CRM, Planhat CS platform, and Intercom support system</li>
+                                <li>Advanced data transformation and cleansing using Pandas</li>
+                                <li>Custom mapping logic to align disparate data schemas</li>
+                                <li>Data validation and quality checks at every stage</li>
+                                <li>Seamless loading into Salesforce via REST API</li>
+                            </ul>
+                        </div>
+
+                        <!-- Project Overview -->
+                        <div class="project-section">
+                            <h3>Project Overview</h3>
+                            <p>
+                                The migration project involved consolidating customer data from three different platforms, each 
+                                with its own data model and structure. Pipedrive stored sales pipeline and deal information, 
+                                Planhat contained customer success metrics and engagement data, and Intercom held support 
+                                conversations and customer interactions.
+                            </p>
+                            <p>
+                                The goal was to create a unified view in Salesforce that would enable better customer relationship 
+                                management, eliminate data silos, and provide a 360-degree view of each customer's journey.
+                            </p>
+                        </div>
+
+                        <!-- The Challenge -->
+                        <div class="project-section">
+                            <h3>The Challenge</h3>
+                            <p>
+                                The primary challenges included dealing with inconsistent data formats across systems, 
+                                identifying and merging duplicate records, preserving complex relationships between entities, 
+                                and handling API rate limits while processing large volumes of data.
+                            </p>
+                            <p>
+                                Additionally, we needed to ensure zero data loss during migration, maintain data accuracy 
+                                throughout the process, and complete the migration within a tight timeline to minimize impact 
+                                on business operations.
+                            </p>
+                        </div>
+
+                        <!-- The Approach & Solution -->
+                        <div class="project-section">
+                            <h3>The Approach & Solution</h3>
+                            <p>
+                                The migration pipeline was built using Python with extensive use of Pandas for data transformation. 
+                                We implemented a phased approach:
+                            </p>
+                            <ul>
+                                <li><strong>Phase 1 - Discovery:</strong> Analyzed source systems, mapped data models, and identified transformation requirements</li>
+                                <li><strong>Phase 2 - Extraction:</strong> Built connectors to extract data from Pipedrive, Planhat, and Intercom APIs</li>
+                                <li><strong>Phase 3 - Transformation:</strong> Normalized data formats, implemented deduplication logic, and mapped to Salesforce schema</li>
+                                <li><strong>Phase 4 - Validation:</strong> Performed data quality checks and reconciliation against source systems</li>
+                                <li><strong>Phase 5 - Loading:</strong> Loaded data into Salesforce with proper error handling and retry mechanisms</li>
+                            </ul>
+                            
+                            <p>
+                                We implemented custom validation rules and data cleansing algorithms to standardize data formats. 
+                                The pipeline included intelligent batch processing with throttling to stay within API limits, and 
+                                comprehensive logging to track every record through the migration process.
+                            </p>
+                        </div>
+
+                        <!-- The Results -->
+                        <div class="project-section">
+                            <h3>The Results</h3>
+                            
+                            <div class="project-metrics">
+                                <div class="metric-card">
+                                    <h4>50,000+</h4>
+                                    <p class="metric-label">Customer Records</p>
+                                    <p class="metric-desc">Successfully migrated</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>200,000+</h4>
+                                    <p class="metric-label">Interactions</p>
+                                    <p class="metric-desc">Consolidated from multiple systems</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>99.8%</h4>
+                                    <p class="metric-label">Data Accuracy</p>
+                                    <p class="metric-desc">Post-migration validation</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>Zero</h4>
+                                    <p class="metric-label">Data Loss</p>
+                                    <p class="metric-desc">Complete data integrity maintained</p>
+                                </div>
+                            </div>
+
+                            <p>
+                                The migration was completed successfully within the planned timeline. The unified customer data 
+                                in Salesforce eliminated data silos, improved cross-team collaboration, and enabled a complete 
+                                360-degree view of customer interactions and history.
+                            </p>
+                            <p>
+                                Teams can now access all customer information in one place, leading to more informed decision-making, 
+                                better customer service, and improved sales efficiency.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="info-card sticky-top" style="top: 20px;">
+                            <h4 class="info-title">Project Info</h4>
+                            <ul class="info-list">
+                                <li><strong>Client:</strong> Casavi GmbH</li>
+                                <li><strong>Duration:</strong> 2 months</li>
+                                <li><strong>Role:</strong> Lead Data Engineer</li>
+                                <li><strong>Year:</strong> 2022</li>
+                            </ul>
+
+                            <h4 class="info-title mt-4">Technologies</h4>
+                            <div class="mb-3">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">REST API</span>
+                                <span class="tech-badge">Salesforce</span>
+                                <span class="tech-badge">Pipedrive</span>
+                                <span class="tech-badge">Planhat</span>
+                                <span class="tech-badge">Intercom</span>
+                            </div>
+
+                            <a href="index.html#projects" class="btn btn-outline-primary w-100 mt-3">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="project-cta">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Want me to help with your project?</h2>
+                        <p class="lead">
+                            I specialize in building scalable data pipelines and analytics solutions. 
+                            Let's discuss how I can help bring your data vision to life.
+                        </p>
+                        <a href="index.html#contact" class="btn btn-primary btn-lg">
+                            <i class="fas fa-envelope me-2"></i>Hire Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Usama Mazhar. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/devcard-script.js"></script>
+</body>
+</html>

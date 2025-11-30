@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Health Score Pipeline - Usama Mazhar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/devcard-style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <img src="images/usama.jpeg" alt="Usama Mazhar" class="profile-img">
+                <h1 class="profile-name">Usama Mazhar</h1>
+                <p class="profile-tagline">Data Engineer</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-user me-2"></i>About Me
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">
+                            <i class="fas fa-briefcase me-2"></i>Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">
+                            <i class="fas fa-file-alt me-2"></i>Resume
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-2"></i>Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="social-links">
+                    <a href="https://github.com/usamamazharcheema" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/usama-mazhar" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:usamamazhar200@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle d-lg-none">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Project Header -->
+        <section class="section-content">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index.html#projects">Projects</a></li>
+                        <li class="breadcrumb-item active">Customer Health Score Pipeline</li>
+                    </ol>
+                </nav>
+                
+                <h1 class="section-title">Case Study: Customer Health Score Pipeline</h1>
+                
+                <p class="project-detail-intro">
+                    Architected an end-to-end customer data platform integrating Airflow orchestration for Salesforce CRM and Pendo 
+                    product analytics extraction, Onehouse lakehouse ingestion with Apache Hudi, and dbt transformation layers to 
+                    calculate comprehensive customer health scores across multiple product platforms, with automated daily sync back 
+                    to Salesforce for customer success operations.
+                </p>
+
+                <div class="row">
+                    <!-- Main Content -->
+                    <div class="col-lg-8">
+                        <!-- Client Info -->
+                        <div class="project-section">
+                            <div class="row align-items-stretch">
+                                <div class="col-md-4 mb-4 d-flex">
+                                    <img src="images/project-1.jpg" alt="Casavi GmbH" class="img-fluid rounded shadow-sm w-100" style="object-fit: cover; max-height: 350px;">
+                                </div>
+                                <div class="col-md-8 mb-4 d-flex flex-column">
+                                    <h3 class="mb-3">Conductor GmbH</h3>
+                                    <p class="mb-2"><i class="fas fa-briefcase me-2"></i><strong>Industry:</strong> SaaS / Marketing Technology</p>
+                                    <p class="mb-2"><i class="fas fa-users me-2"></i><strong>Size:</strong> 200+</p>
+                                    <p class="mb-3"><i class="fas fa-link me-2"></i><strong>Website:</strong> <a href="https://conductor.com" target="_blank">conductor.com</a></p>
+                                    <p class="mb-2"><i class="fas fa-calendar me-2"></i><strong>Project Date:</strong> July 2025</p>
+                                    
+                                    <p class="mb-0">
+                                        Conductor is a leading enterprise SEO and content marketing platform serving Fortune 500 companies. 
+                                        This project involved building a data transformation pipeline to aggregate product usage data from 
+                                        multiple platforms, calculate customer health scores across 30/90/180/360-day windows, and sync 
+                                        results to Salesforce for customer success team visibility and proactive account management.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <h4 class="mb-3">Key Requirements</h4>
+                            <ul>
+                                <li>Provide comprehensive customer health visibility by tracking usage across both Conductor Intelligence (CI) and 
+                                Web Monitoring (CWM) platforms with feature-level granularity</li>
+                                
+                                <li>Enable trend analysis through rolling window metrics (30, 90, 180, and 360 days) to identify engagement 
+                                patterns and early warning signals for churn risk</li>
+                                
+                                <li>Calculate customer health scores using a custom algorithm that combines active users, engagement frequency, 
+                                time in platform, and feature adoption rates</li>
+                                
+                                <li>Integrate seamlessly with existing systems—pulling customer data from Salesforce CRM and product analytics 
+                                from Pendo, then syncing health scores back to Salesforce for Customer Success team access</li>
+                                
+                                <li>Maintain data accuracy by excluding trial, demo, and PLG accounts from production health calculations while 
+                                integrating with Catalyst framework for platform health categorization</li>
+                                
+                                <li>Ensure scalability and future flexibility with database-agnostic design supporting potential platform migrations</li>
+                                
+                                <li>Deliver real-time insights with daily health score refreshes and monthly snapshot records providing both 
+                                current metrics and historical trend data</li>
+                            </ul>
+                        </div>
+
+                        <!-- Project Overview -->
+                        <div class="project-section">
+                            <h3>Project Overview</h3>
+                            <p>
+                                <strong>The Goal:</strong> Build an automated system to track and predict customer retention risk by analyzing 
+                                product usage patterns and engagement trends. The platform helps Conductor's teams identify at-risk customers 
+                                early and take proactive action to prevent churn, while also spotting high-engagement accounts ready for expansion.
+                            </p>
+                            <p>
+                                <strong>The Solution:</strong> The system provides a comprehensive view of customer health by tracking usage 
+                                across Conductor's multiple platforms (Intelligence and Web Monitoring), monitoring engagement with specific 
+                                features, and analyzing patterns over different time windows (30, 90, 180, and 360 days). It combines customer 
+                                information from Salesforce CRM with product usage data from Pendo analytics to calculate health scores based 
+                                on metrics like active users, active days, time spent in platform, and feature adoption rates.
+                            </p>
+                            <p>
+                                Technically, this is implemented as a full-stack customer data platform (CDP) that orchestrates data flow through 
+                                four key stages: extraction (Apache Airflow pulling data from Salesforce and Pendo APIs), lakehouse storage (AWS 
+                                Onehouse with Apache Hudi providing ACID-compliant data lake), transformation (dbt models applying business logic 
+                                and health scoring algorithms), and operational sync (AWS AppFlow pushing results back to Salesforce for 
+                                Customer Success team visibility).
+                            </p>
+                            
+                            <h4 class="mt-4 mb-3">System Architecture</h4>
+                            <div style="background: linear-gradient(135deg, #54B689 0%, #3a8a65 100%); padding: 30px; border-radius: 12px; overflow-x: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                                <pre style="margin: 0; line-height: 1.8; color: #ffffff; font-size: 14px;">
+    <span style="color: #ffd700;">╔═══════════════════════════════════════════════════════════════════════╗</span>
+    <span style="color: #ffd700;">║</span>                      <span style="font-weight: bold; color: #fff;">🌐 DATA SOURCES LAYER</span>                        <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╠═══════════════════════════════════════════════════════════════════════╣</span>
+    <span style="color: #ffd700;">║</span>   <span style="color: #90EE90;">📊 Salesforce CRM</span>              <span style="color: #90EE90;">📈 Pendo Analytics</span>           <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   └─ Account, Contact,            └─ Events, Features,           <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>      Business Units,                 Pages, Visitors            <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>      Customer Records                Product Usage Metrics      <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╚═══════════════════════════════════════════════════════════════════════╝</span>
+                                    <span style="color: #87CEEB;">│</span>
+                                    <span style="color: #87CEEB;">▼</span>
+    <span style="color: #ffd700;">╔═══════════════════════════════════════════════════════════════════════╗</span>
+    <span style="color: #ffd700;">║</span>                 <span style="font-weight: bold; color: #fff;">⚙️  ORCHESTRATION & ETL LAYER</span>                    <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╠═══════════════════════════════════════════════════════════════════════╣</span>
+    <span style="color: #ffd700;">║</span>                      <span style="color: #FFB6C1;">Apache Airflow</span>                             <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   ┌──────────────────────────────────────────────────────────┐   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 🔄 Dynamic DAG Generation   │  🛡️  Error Handling    │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 🔌 API Extractors (REST)    │  ⏱️  Scheduled Jobs    │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 📊 Data Validation          │  🔔 Slack Alerts       │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   └──────────────────────────────────────────────────────────┘   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╚═══════════════════════════════════════════════════════════════════════╝</span>
+                                    <span style="color: #87CEEB;">│</span>
+                                    <span style="color: #87CEEB;">▼</span>
+    <span style="color: #ffd700;">╔═══════════════════════════════════════════════════════════════════════╗</span>
+    <span style="color: #ffd700;">║</span>                  <span style="font-weight: bold; color: #fff;">💾 LAKEHOUSE STORAGE LAYER</span>                      <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╠═══════════════════════════════════════════════════════════════════════╣</span>
+    <span style="color: #ffd700;">║</span>           <span style="color: #98FB98;">AWS Onehouse + Apache Hudi + AWS Athena</span>              <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   ┌──────────────────────────────────────────────────────────┐   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ ⚡ Real-time Stream Capture │  🔍 SQL Query Engine   │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 🔒 ACID Transactions        │  📦 S3 Storage         │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 🔄 Schema Evolution         │  ⏰ Time Travel        │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   └──────────────────────────────────────────────────────────┘   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╚═══════════════════════════════════════════════════════════════════════╝</span>
+                                    <span style="color: #87CEEB;">│</span>
+                                    <span style="color: #87CEEB;">▼</span>
+    <span style="color: #ffd700;">╔═══════════════════════════════════════════════════════════════════════╗</span>
+    <span style="color: #ffd700;">║</span>                <span style="font-weight: bold; color: #fff;">🔧 TRANSFORMATION & ANALYTICS LAYER</span>               <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╠═══════════════════════════════════════════════════════════════════════╣</span>
+    <span style="color: #ffd700;">║</span>                        <span style="color: #FFA07A;">dbt (Data Build Tool)</span>                       <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   ┌──────────────────────────────────────────────────────────┐   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 🧹 Staging Models           │  🧮 Business Logic     │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 📊 Aggregations             │  🎯 Health Scoring     │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 📈 Rolling Windows          │  ✅ Data Quality Tests │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   └──────────────────────────────────────────────────────────┘   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╚═══════════════════════════════════════════════════════════════════════╝</span>
+                                    <span style="color: #87CEEB;">│</span>
+                                    <span style="color: #87CEEB;">▼</span>
+    <span style="color: #ffd700;">╔═══════════════════════════════════════════════════════════════════════╗</span>
+    <span style="color: #ffd700;">║</span>                  <span style="font-weight: bold; color: #fff;">🎯 OPERATIONAL DELIVERY LAYER</span>                  <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╠═══════════════════════════════════════════════════════════════════════╣</span>
+    <span style="color: #ffd700;">║</span>               <span style="color: #ADD8E6;">Salesforce CRM (via AWS AppFlow)</span>                  <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   ┌──────────────────────────────────────────────────────────┐   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 📤 Daily Health Score Sync  │  👥 CS Team Dashboards │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 🔄 Upsert Operations        │  📊 Real-time Metrics  │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 🎨 100+ Calculated Fields   │  🚨 At-Risk Alerts     │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   └──────────────────────────────────────────────────────────┘   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╚═══════════════════════════════════════════════════════════════════════╝</span>
+                </pre>
+                            </div>
+                            
+                            <p class="mt-4">
+                                The pipeline processes product usage data from Pendo analytics (tracking Conductor Intelligence and Web Monitoring platforms), 
+                                links it with Salesforce CRM records, and calculates health scores using a custom algorithm that weights active users, 
+                                active days, and time spent in platform. The system tracks usage patterns across CI and CWM independently and combined, 
+                                with rolling window aggregations (30/90/180/360 days) enabling trend analysis and early churn detection.
+                            </p>
+                        </div>
+
+                        <!-- The Challenge -->
+                        <div class="project-section">
+                            <h3>The Challenge</h3>
+                            <p>
+                                Conductor's customer data was split between Salesforce CRM (customer records, account details, business units) 
+                                and Pendo product analytics (usage events, visitor tracking, feature adoption, page views). The business needed 
+                                a unified customer 360-degree view to power health scoring, but faced significant technical and operational hurdles 
+                                integrating these two critical data sources.
+                            </p>
+                            <p>
+                                <strong>Data Integration Challenges:</strong> Building resilient extractors for both platforms with different characteristics—
+                                Salesforce's REST API required change data capture via SystemModstamp to track incremental updates across 10+ objects 
+                                (Account, Contact, Business_Units__c, RecordType, etc.), handling compound field exclusions and deleted record queries. 
+                                Pendo's aggregation API needed hourly polling for event streams with 4 different aggregation types (configuration, 
+                                aggregated_configuration, ungrouped, grouped), complex pagination for large result sets, and period-based time windowing. 
+                                Both required OAuth authentication, retry logic for transient failures, and rate limit handling.
+                            </p>
+                            <p>
+                                <strong>Data Platform Challenges:</strong> The system needed to run on AWS Athena for querying the Onehouse 
+                                data lake, but the team wanted database-agnostic transformation logic to maintain flexibility for potential 
+                                future migrations. This required abstracting database-specific SQL functions (string operations, date math, 
+                                aggregations) into reusable macros that could adapt to different query engines. The lakehouse architecture 
+                                (Onehouse with Apache Hudi) needed stream capture configuration for each table with proper partitioning and merge 
+                                strategies. Linking Salesforce Account IDs with Pendo Account IDs required complex joining logic, and schema drift 
+                                from either API could break downstream pipelines.
+                            </p>
+                            <p>
+                                <strong>Business Logic Challenges:</strong> Customer health scoring required complex temporal aggregations (MTD, L30D, 3/6/12-month 
+                                averages) across multiple products (CI and CWM tracked via Pendo) with feature-level granularity (Writing Assistant drafts, Content 
+                                Guidance usage, Pages engagement). The system had to exclude trial/demo/PLG accounts from production scoring, integrate with the 
+                                existing Catalyst scoring framework, handle late-arriving data corrections, and sync 100+ calculated fields back to Salesforce daily 
+                                with upsert logic to avoid duplicate records.
+                            </p>
+                        </div>
+
+                        <!-- The Approach & Solution -->
+                        <div class="project-section">
+                            <h3>The Approach & Solution</h3>
+                            <p>
+                                I architected a full-stack customer data platform with four distinct layers, each optimized for its specific role 
+                                in the data pipeline—from extraction to operational delivery.
+                            </p>
+                            
+                            <h5>1. Extraction & Orchestration (Apache Airflow)</h5>
+                            <ul>
+                                <li><strong>Dynamic Pipeline Generation:</strong> Built automated DAG creation from configuration files, allowing 
+                                new data sources to be added without code changes</li>
+                                
+                                <li><strong>Resilient API Integration:</strong> Implemented custom extractors for Salesforce and Pendo with built-in 
+                                retry logic, rate limiting, and error handling to ensure reliable data collection</li>
+                                
+                                <li><strong>Incremental Loading:</strong> Designed change data capture for Salesforce and event streaming for Pendo, 
+                                minimizing API calls and data transfer while keeping information current</li>
+                                
+                                <li><strong>Monitoring & Alerts:</strong> Integrated Slack notifications for pipeline failures and data quality issues, 
+                                enabling quick response to operational problems</li>
+                            </ul>
+                            
+                            <h5>2. Lakehouse Storage (AWS Onehouse + Athena)</h5>
+                            <ul>
+                                <li><strong>Modern Data Lake:</strong> Leveraged Apache Hudi for ACID transactions and time-travel capabilities, 
+                                ensuring data consistency and enabling historical analysis</li>
+                                
+                                <li><strong>Schema Evolution:</strong> Configured automatic schema adaptation to handle API changes without breaking 
+                                downstream processes</li>
+                                
+                                <li><strong>Query Performance:</strong> Optimized partitioning and file formats for fast analytical queries via AWS Athena, 
+                                supporting both batch and ad-hoc analysis</li>
+                            </ul>
+                            
+                            <h5>3. Data Transformation (dbt)</h5>
+                            <ul>
+                                <li><strong>Modular Design:</strong> Built 15+ reusable transformation models organized in layers (staging → business logic → marts), 
+                                promoting code reuse and maintainability</li>
+                                
+                                <li><strong>Business Logic Implementation:</strong> 
+                                    <ul>
+                                        <li>Linked Salesforce customer accounts with Pendo product usage data</li>
+                                        <li>Calculated rolling window metrics (30/90/180/360 days) for trend analysis</li>
+                                        <li>Aggregated usage across CI and CWM products with feature-level granularity</li>
+                                        <li>Applied proprietary health scoring algorithm combining user engagement, activity frequency, and feature adoption</li>
+                                        <li>Integrated with Catalyst framework for platform health categorization</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>Database Portability:</strong> Built database-agnostic macro layer abstracting SQL functions to support 
+                                future database migrations, while currently running on AWS Athena for production workloads</li>
+                                
+                                <li><strong>Quality Assurance:</strong> Implemented comprehensive testing with data fixtures and automated validation in CI/CD pipeline</li>
+                            </ul>
+                            
+                            <h5>4. Operational Delivery (AWS AppFlow)</h5>
+                            <ul>
+                                <li><strong>Salesforce Integration:</strong> Configured automated sync of 100+ calculated health score fields back to Salesforce 
+                                Customer Health Score objects</li>
+                                
+                                <li><strong>Sync Cadence & Logic:</strong> 
+                                    <ul>
+                                        <li><strong>Monthly Record Creation:</strong> New Customer Health Score record created for each active account on the 
+                                        first day of every month, providing a monthly health snapshot</li>
+                                        <li><strong>Daily Data Refresh:</strong> All fields on the monthly record updated daily to reflect current rolling 
+                                        averages rather than static month-end values, ensuring real-time accuracy</li>
+                                        <li><strong>Time Stamp Logic:</strong> At month end, Time in Platform fields are time-stamped with the final 
+                                        30-day calculation and stop collecting new data for that record</li>
+                                        <li><strong>Rolling Averages Approach:</strong> Uses "last X days" calculations instead of calendar months to provide 
+                                        more accurate real-time metrics aligned with the rolling 3-month measurement framework</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>Smart Updates:</strong> Implemented upsert logic to update existing records and create new ones, avoiding duplicates 
+                                while maintaining data history</li>
+                            </ul>
+                        </div>
+
+                        <!-- The Results -->
+                        <div class="project-section">
+                            <h3>The Results</h3>
+                            
+                            <div class="project-metrics">
+                                <div class="metric-card">
+                                    <h4>2</h4>
+                                    <p class="metric-label">Data Sources</p>
+                                    <p class="metric-desc">Salesforce & Pendo integrated</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>2</h4>
+                                    <p class="metric-label">Airflow DAGs</p>
+                                    <p class="metric-desc">Extraction pipelines orchestrated</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>15+</h4>
+                                    <p class="metric-label">dbt Models</p>
+                                    <p class="metric-desc">Intermediate transformations</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>100+</h4>
+                                    <p class="metric-label">Health Score Fields</p>
+                                    <p class="metric-desc">Synced to Salesforce daily</p>
+                                </div>
+                            </div>
+
+                            <h4 class="mt-4 mb-3">Business Impact & Results</h4>
+                            
+                            <p>
+                                <strong>Customer Retention Improvements:</strong> The automated health scoring system became a critical 
+                                tool for Conductor's customer retention strategy. By providing early warning signals when customer 
+                                engagement declined, the Customer Success team could intervene proactively—often before customers 
+                                even realized they weren't maximizing platform value. This predictive approach enabled targeted 
+                                outreach, personalized training sessions, and strategic check-ins that significantly reduced churn risk.
+                            </p>
+                            
+                            <p>
+                                <strong>Cross-Functional Enablement:</strong> The health score data transformed decision-making across 
+                                multiple departments. Sales representatives identified high-engagement accounts for upsell conversations, 
+                                prioritizing expansion opportunities with the strongest product-market fit. Product managers analyzed 
+                                feature adoption patterns to inform roadmap priorities, focusing development efforts on capabilities 
+                                that correlated with high health scores. Executive leadership gained a real-time, data-driven view of 
+                                customer satisfaction trends, portfolio health, and retention risks across the entire customer base.
+                            </p>
+                            
+                            <p>
+                                <strong>Operational Efficiency:</strong> By automating health calculations and Salesforce integration, 
+                                the pipeline eliminated hundreds of hours of manual data analysis previously performed by the CS team. 
+                                The daily refresh cycle ensured teams always worked with current data, and the comprehensive 100+ field 
+                                dataset provided unprecedented granularity—tracking not just overall health but product-specific usage 
+                                (CI vs CWM), feature-level engagement, and temporal trends across multiple time windows.
+                            </p>
+                            
+                            <p>
+                                <strong>Strategic Value:</strong> The platform's architecture positioned Conductor for future growth. 
+                                The modular design allows rapid integration of additional data sources, and the database-agnostic dbt macro 
+                                layer provides migration flexibility if the team ever needs to move from Athena to alternative query engines. 
+                                The documented business logic creates an organizational knowledge asset that transcends individual team members. 
+                                Most critically, the system established a data-driven culture where customer health metrics inform every strategic 
+                                conversation about retention, growth, and product development.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="info-card sticky-top" style="top: 20px;">
+                            <h4 class="info-title">Project Info</h4>
+                            <ul class="info-list">
+                                <li><strong>Client:</strong> Conductor GmbH</li>
+                                <li><strong>Duration:</strong> Ongoing</li>
+                                <li><strong>Role:</strong> Data Engineer</li>
+                                <li><strong>Year:</strong> July 2025</li>
+                            </ul>
+
+                            <h4 class="info-title mt-4">Technologies</h4>
+                            <div class="mb-3">
+                                <span class="tech-badge">Apache Airflow</span>
+                                <span class="tech-badge">dbt</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">SQL</span>
+                                <span class="tech-badge">AWS Onehouse</span>
+                                <span class="tech-badge">Apache Hudi</span>
+                                <span class="tech-badge">AWS Athena</span>
+                                <span class="tech-badge">AWS S3</span>
+                                <span class="tech-badge">AWS AppFlow</span>
+                                <span class="tech-badge">Salesforce API</span>
+                                <span class="tech-badge">Pendo API</span>
+                                <span class="tech-badge">REST APIs</span>
+                            </div>
+
+                            <a href="index.html#projects" class="btn btn-outline-primary w-100 mt-3">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="project-cta">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Want me to help with your project?</h2>
+                        <p class="lead">
+                            I specialize in building scalable data pipelines and analytics solutions. 
+                            Let's discuss how I can help bring your data vision to life.
+                        </p>
+                        <a href="index.html#contact" class="btn btn-primary btn-lg">
+                            <i class="fas fa-envelope me-2"></i>Hire Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Usama Mazhar. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/devcard-script.js"></script>
+</body>
+</html>

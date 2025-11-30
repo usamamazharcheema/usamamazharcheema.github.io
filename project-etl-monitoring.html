@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETL Processes Monitoring - Usama Mazhar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/devcard-style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <img src="images/usama.jpeg" alt="Usama Mazhar" class="profile-img">
+                <h1 class="profile-name">Usama Mazhar</h1>
+                <p class="profile-tagline">Data Engineer</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-user me-2"></i>About Me
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">
+                            <i class="fas fa-briefcase me-2"></i>Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">
+                            <i class="fas fa-file-alt me-2"></i>Resume
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-2"></i>Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="social-links">
+                    <a href="https://github.com/usamamazharcheema" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/usama-mazhar" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:usamamazhar200@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle d-lg-none">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Project Header -->
+        <section class="section-content">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index.html#projects">Projects</a></li>
+                        <li class="breadcrumb-item active">ETL Processes Monitoring</li>
+                    </ol>
+                </nav>
+                
+                <h1 class="section-title">Case Study: ETL Processes Monitoring</h1>
+                
+                <p class="project-detail-intro">
+                    Designed and implemented a comprehensive monitoring solution to track the health and performance of 
+                    over 6000 concurrent ETL processes, providing real-time visibility into data pipeline operations and 
+                    enabling proactive issue resolution.
+                </p>
+
+                <div class="row">
+                    <!-- Main Content -->
+                    <div class="col-lg-8">
+                        <!-- Client Info -->
+                        <div class="project-section">
+                            <div class="row align-items-stretch">
+                                <div class="col-md-4 mb-4 d-flex">
+                                    <img src="images/project-3.jpg" alt="ETL Monitoring" class="img-fluid rounded shadow-sm w-100" style="object-fit: cover; max-height: 350px;">
+                                </div>
+                                <div class="col-md-8 mb-4 d-flex flex-column">
+                                    <h3 class="mb-3">Internal Project</h3>
+                                    <p class="mb-2"><i class="fas fa-briefcase me-2"></i><strong>Industry:</strong> Data Engineering</p>
+                                    <p class="mb-2"><i class="fas fa-users me-2"></i><strong>Team Size:</strong> 15+</p>
+                                    <p class="mb-3"><i class="fas fa-project-diagram me-2"></i><strong>Type:</strong> Internal Infrastructure</p>
+                                    
+                                    <p class="mb-0">
+                                        With thousands of ETL processes running concurrently, the data engineering team needed 
+                                        a centralized monitoring solution to track pipeline health, identify failures quickly, 
+                                        and maintain high data quality standards across all data workflows.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <h4 class="mb-3">Project Requirements</h4>
+                            <ul>
+                                <li>Real-time dashboard monitoring 6000+ ETL processes</li>
+                                <li>Automated alerting system for failed or delayed pipelines</li>
+                                <li>Performance metrics and trend analysis capabilities</li>
+                                <li>Historical data tracking for pattern identification</li>
+                                <li>Drill-down capabilities for detailed process analysis</li>
+                            </ul>
+                        </div>
+
+                        <!-- Project Overview -->
+                        <div class="project-section">
+                            <h3>Project Overview</h3>
+                            <p>
+                                The organization was running over 6000 ETL processes handling critical business data from 
+                                various sources. Without a centralized monitoring system, issues often went undetected until 
+                                they impacted downstream systems or reports. The team needed visibility into pipeline status, 
+                                execution times, failure rates, and resource utilization.
+                            </p>
+                            <p>
+                                The goal was to create a comprehensive monitoring dashboard that would provide real-time insights, 
+                                enable proactive issue detection, and help optimize pipeline performance across the entire 
+                                data infrastructure.
+                            </p>
+                        </div>
+
+                        <!-- The Challenge -->
+                        <div class="project-section">
+                            <h3>The Challenge</h3>
+                            <p>
+                                The primary challenges included aggregating data from thousands of concurrent processes in 
+                                real-time, designing intuitive visualizations that could handle this scale, and implementing 
+                                an alerting system that could distinguish between critical failures and transient issues.
+                            </p>
+                            <p>
+                                Additionally, the solution needed to have minimal performance impact on the production 
+                                systems, provide historical trend analysis for capacity planning, and be accessible to 
+                                both technical and non-technical stakeholders.
+                            </p>
+                        </div>
+
+                        <!-- The Approach & Solution -->
+                        <div class="project-section">
+                            <h3>The Approach & Solution</h3>
+                            <p>
+                                Built on MySQL as the primary data store for process metadata and execution logs. The solution 
+                                consisted of multiple components:
+                            </p>
+                            <ul>
+                                <li><strong>Data Collection Layer:</strong> Lightweight agents capturing execution metrics from all ETL processes</li>
+                                <li><strong>Aggregation Layer:</strong> Complex SQL queries aggregating and analyzing pipeline status in real-time</li>
+                                <li><strong>Visualization Layer:</strong> Power BI dashboards with automatic refresh for live monitoring</li>
+                                <li><strong>Alerting System:</strong> Smart alerts based on failure patterns and severity levels</li>
+                                <li><strong>Historical Analysis:</strong> Time-series data for trend identification and capacity planning</li>
+                            </ul>
+                            
+                            <p>
+                                The dashboard tracked execution time, success rates, data volumes, error patterns, and 
+                                resource utilization. We implemented intelligent thresholds that adapt based on historical 
+                                patterns to reduce false alerts while ensuring critical issues are never missed.
+                            </p>
+                        </div>
+
+                        <!-- The Results -->
+                        <div class="project-section">
+                            <h3>The Results</h3>
+                            
+                            <div class="project-metrics">
+                                <div class="metric-card">
+                                    <h4>85%</h4>
+                                    <p class="metric-label">Faster Detection</p>
+                                    <p class="metric-desc">Reduced mean time to detect failures</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>98.5%</h4>
+                                    <p class="metric-label">Success Rate</p>
+                                    <p class="metric-desc">Improved from 92%</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>70%</h4>
+                                    <p class="metric-label">Faster Response</p>
+                                    <p class="metric-desc">Decreased incident response time</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>15+ hrs</h4>
+                                    <p class="metric-label">Compute Saved</p>
+                                    <p class="metric-desc">Daily optimization savings</p>
+                                </div>
+                            </div>
+
+                            <p>
+                                The monitoring solution transformed how the data engineering team manages pipeline operations. 
+                                With real-time visibility and automated alerts, the team can now identify and resolve issues 
+                                before they impact downstream systems or business operations.
+                            </p>
+                            <p>
+                                The historical analysis capabilities enabled proactive optimization, helping the team identify 
+                                inefficient processes and optimize resource allocation. This led to significant cost savings 
+                                and improved overall data infrastructure reliability.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="info-card sticky-top" style="top: 20px;">
+                            <h4 class="info-title">Project Info</h4>
+                            <ul class="info-list">
+                                <li><strong>Type:</strong> Internal Project</li>
+                                <li><strong>Duration:</strong> 2 months</li>
+                                <li><strong>Role:</strong> Data Engineer</li>
+                                <li><strong>Year:</strong> 2021</li>
+                            </ul>
+
+                            <h4 class="info-title mt-4">Technologies</h4>
+                            <div class="mb-3">
+                                <span class="tech-badge">SQL</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Power BI</span>
+                                <span class="tech-badge">Python</span>
+                            </div>
+
+                            <a href="index.html#projects" class="btn btn-outline-primary w-100 mt-3">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="project-cta">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Want me to help with your project?</h2>
+                        <p class="lead">
+                            I specialize in building scalable data pipelines and analytics solutions. 
+                            Let's discuss how I can help bring your data vision to life.
+                        </p>
+                        <a href="index.html#contact" class="btn btn-primary btn-lg">
+                            <i class="fas fa-envelope me-2"></i>Hire Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Usama Mazhar. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/devcard-script.js"></script>
+</body>
+</html>
