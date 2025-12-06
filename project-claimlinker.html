@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClaimLinker - Usama Mazhar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/devcard-style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <img src="images/usama.jpeg" alt="Usama Mazhar" class="profile-img">
+                <h1 class="profile-name">Usama Mazhar</h1>
+                <p class="profile-tagline">Data Engineer</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-user me-2"></i>About Me
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">
+                            <i class="fas fa-briefcase me-2"></i>Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">
+                            <i class="fas fa-file-alt me-2"></i>Resume
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-2"></i>Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="social-links">
+                    <a href="https://github.com/usamamazharcheema" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/usama-mazhar" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:usamamazhar200@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle d-lg-none">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Project Header -->
+        <section class="section-content">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index.html#projects">Projects</a></li>
+                        <li class="breadcrumb-item active">ClaimLinker</li>
+                    </ol>
+                </nav>
+                
+                <h1 class="section-title">Case Study: ClaimLinker</h1>
+                
+                <p class="project-detail-intro">
+                    Developed an innovative NLP system that automatically links textual claims to a knowledge graph of 
+                    fact-checked information, helping identify and verify claims using advanced similarity measures and 
+                    search technologies for automated fact-checking.
+                </p>
+
+                <div class="row">
+                    <!-- Main Content -->
+                    <div class="col-lg-8">
+                        <!-- Client Info -->
+                        <div class="project-section">
+                            <div class="row align-items-stretch">
+                                <div class="col-md-4 mb-4 d-flex">
+                                    <img src="images/project-4.jpg" alt="ClaimLinker" class="img-fluid rounded shadow-sm w-100" style="object-fit: cover; max-height: 350px;">
+                                </div>
+                                <div class="col-md-8 mb-4 d-flex flex-column">
+                                    <h3 class="mb-3">Research Project</h3>
+                                    <p class="mb-2"><i class="fas fa-briefcase me-2"></i><strong>Field:</strong> Natural Language Processing</p>
+                                    <p class="mb-2"><i class="fas fa-university me-2"></i><strong>Institution:</strong> University Research</p>
+                                    <p class="mb-3"><i class="fas fa-flask me-2"></i><strong>Type:</strong> Academic Research</p>
+                                    
+                                    <p class="mb-0">
+                                        The project aimed to automate the fact-checking process by linking claims to a database 
+                                        of previously verified information. By using multiple similarity measures and semantic 
+                                        search, the system helps researchers and fact-checkers quickly identify related claims.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <h4 class="mb-3">Project Requirements</h4>
+                            <ul>
+                                <li>Unsupervised claim detection and extraction from text</li>
+                                <li>Multiple textual similarity measures for comprehensive matching</li>
+                                <li>Elasticsearch-powered semantic search capabilities</li>
+                                <li>Knowledge graph integration for fact verification</li>
+                                <li>Scalable architecture for large claim databases</li>
+                            </ul>
+                        </div>
+
+                        <!-- Project Overview -->
+                        <div class="project-section">
+                            <h3>Project Overview</h3>
+                            <p>
+                                ClaimLinker addresses the challenge of identifying whether a claim has been previously 
+                                fact-checked. With the exponential growth of misinformation online, fact-checkers often 
+                                duplicate efforts by verifying the same claims multiple times. This system helps them 
+                                quickly find existing fact-checks and focus on new, unverified claims.
+                            </p>
+                            <p>
+                                The system processes claims through multiple similarity algorithms and combines their scores 
+                                to produce accurate matches, even when claims are phrased differently or use different 
+                                vocabulary while expressing the same core assertion.
+                            </p>
+                        </div>
+
+                        <!-- The Challenge -->
+                        <div class="project-section">
+                            <h3>The Challenge</h3>
+                            <p>
+                                The main challenges included handling semantic similarity when claims are expressed in 
+                                different ways, dealing with incomplete or vague claims, and achieving high accuracy 
+                                while maintaining fast query response times for large databases.
+                            </p>
+                            <p>
+                                Additionally, the system needed to work in an unsupervised manner without requiring 
+                                labeled training data, and be flexible enough to handle claims across different domains 
+                                and topics without domain-specific tuning.
+                            </p>
+                        </div>
+
+                        <!-- The Approach & Solution -->
+                        <div class="project-section">
+                            <h3>The Approach & Solution</h3>
+                            <p>
+                                Built using Java with extensive NLP libraries for text processing. The system employs 
+                                a multi-layered approach:
+                            </p>
+                            <ul>
+                                <li><strong>Preprocessing Layer:</strong> Text cleaning, tokenization, and entity extraction</li>
+                                <li><strong>Similarity Computation:</strong> Eight different similarity measures including cosine, Jaccard, Levenshtein, and semantic embeddings</li>
+                                <li><strong>Search Layer:</strong> Elasticsearch for fast full-text and semantic search</li>
+                                <li><strong>Ranking Layer:</strong> Custom algorithm combining similarity scores with search relevance</li>
+                                <li><strong>Knowledge Graph:</strong> Neo4j for storing and querying fact-checked claims with relationships</li>
+                            </ul>
+                            
+                            <p>
+                                The similarity measures are carefully weighted and combined. Vector-based methods (Word2Vec, 
+                                TF-IDF) capture semantic meaning, while character and token-based methods (Levenshtein, 
+                                Jaccard) handle lexical similarity. The final ranking uses a weighted average of all scores 
+                                combined with Elasticsearch's BM25 relevance score.
+                            </p>
+                        </div>
+
+                        <!-- The Results -->
+                        <div class="project-section">
+                            <h3>The Results</h3>
+                            
+                            <div class="project-metrics">
+                                <div class="metric-card">
+                                    <h4>87%</h4>
+                                    <p class="metric-label">Accuracy</p>
+                                    <p class="metric-desc">Linking claims to fact-checks</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>100K+</h4>
+                                    <p class="metric-label">Claims Indexed</p>
+                                    <p class="metric-desc">Fact-checked claims processed</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>&lt;200ms</h4>
+                                    <p class="metric-label">Query Time</p>
+                                    <p class="metric-desc">Average response time</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>Published</h4>
+                                    <p class="metric-label">Research</p>
+                                    <p class="metric-desc">Conference publication</p>
+                                </div>
+                            </div>
+
+                            <p>
+                                The system successfully demonstrated that automated claim linking is feasible with high 
+                                accuracy using unsupervised methods. Fact-checkers can now quickly search for similar 
+                                claims before starting verification work, reducing duplication and accelerating the 
+                                fact-checking process.
+                            </p>
+                            <p>
+                                The research contributed to the academic understanding of automated fact-checking and has 
+                                potential applications in journalism, social media platforms, and information verification 
+                                systems. The multi-similarity approach proved more robust than single-method systems.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="info-card sticky-top" style="top: 20px;">
+                            <h4 class="info-title">Project Info</h4>
+                            <ul class="info-list">
+                                <li><strong>Type:</strong> Research Project</li>
+                                <li><strong>Duration:</strong> 6 months</li>
+                                <li><strong>Role:</strong> Research Engineer</li>
+                                <li><strong>Year:</strong> 2020</li>
+                            </ul>
+
+                            <h4 class="info-title mt-4">Technologies</h4>
+                            <div class="mb-3">
+                                <span class="tech-badge">Java</span>
+                                <span class="tech-badge">NLP</span>
+                                <span class="tech-badge">Elasticsearch</span>
+                                <span class="tech-badge">Neo4j</span>
+                                <span class="tech-badge">Word2Vec</span>
+                            </div>
+
+                            <h4 class="info-title mt-4">Links</h4>
+                            <p><a href="https://github.com/usamamazharcheema" target="_blank" class="text-primary"><i class="fab fa-github me-2"></i>View on GitHub</a></p>
+
+                            <a href="index.html#projects" class="btn btn-outline-primary w-100 mt-3">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="project-cta">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Want me to help with your project?</h2>
+                        <p class="lead">
+                            I specialize in building scalable data pipelines and analytics solutions. 
+                            Let's discuss how I can help bring your data vision to life.
+                        </p>
+                        <a href="index.html#contact" class="btn btn-primary btn-lg">
+                            <i class="fas fa-envelope me-2"></i>Hire Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Usama Mazhar. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/devcard-script.js"></script>
+</body>
+</html>
