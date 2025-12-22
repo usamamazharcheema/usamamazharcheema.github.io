@@ -41,7 +41,7 @@
                             <i class="fas fa-briefcase me-2"></i>Portfolio
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="display: none;">
                         <a class="nav-link" href="resume.html">
                             <i class="fas fa-file-alt me-2"></i>Resume
                         </a>
@@ -59,7 +59,7 @@
                     <a href="https://github.com/usamamazharcheema" target="_blank" class="social-link">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://linkedin.com/in/usamamazhar" target="_blank" class="social-link">
+                    <a href="https://www.linkedin.com/in/usama-mazhar-851270149/" target="_blank" class="social-link">
                         <i class="fab fa-linkedin"></i>
                     </a>
                     <a href="mailto:usamamazharcheema@gmail.com" class="social-link">
@@ -86,10 +86,36 @@
                 <div class="row g-4">
                     <!-- Project 1 -->
                     <div class="col-lg-6">
+                        <a href="project-airflow-onehouse-pipelines.html" class="text-decoration-none">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/project-1.jpg" alt="Airflow Onehouse Pipelines">
+                                </div>
+                                <div class="project-content">
+                                    <h4 class="project-title">Airflow Onehouse Data Pipelines</h4>
+                                    <p class="project-desc">
+                                        Architected microservices-based CDP integrating 8+ data sources (Salesforce, Pendo, Gong, etc.) 
+                                        with Apache Airflow orchestration, dedicated extraction/transformation services, and AWS Onehouse 
+                                        lakehouse. Migrated from monolithic operators to deferrable sensors, reducing worker load by 70%.
+                                    </p>
+                                    <div class="project-tech">
+                                        <span class="tech-badge">Airflow</span>
+                                        <span class="tech-badge">Microservices</span>
+                                        <span class="tech-badge">AWS Onehouse</span>
+                                        <span class="tech-badge">FastAPI</span>
+                                    </div>
+                                    <p class="project-client"><strong>Client:</strong> Conductor GmbH</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="col-lg-6">
                         <a href="project-customer-health-score.html" class="text-decoration-none">
                             <div class="project-card">
                                 <div class="project-image">
-                                    <img src="images/project-1.jpg" alt="Customer Health Score Pipeline">
+                                    <img src="images/project-2.jpg" alt="Customer Health Score Pipeline">
                                 </div>
                                 <div class="project-content">
                                     <h4 class="project-title">Customers Health Score Pipeline</h4>
@@ -110,18 +136,20 @@
                         </a>
                     </div>
                     
-                    <!-- Project 2 -->
+                    <!-- Project 3 -->
                     <div class="col-lg-6">
                         <a href="project-data-migration.html" class="text-decoration-none">
                             <div class="project-card">
                                 <div class="project-image">
-                                    <img src="images/project-2.jpg" alt="Data Migration">
+                                    <img src="images/project-3.jpg" alt="Salesforce CRM Data Migration">
                                 </div>
                                 <div class="project-content">
-                                    <h4 class="project-title">One-time Data Migration</h4>
+                                    <h4 class="project-title">Salesforce CRM Data Migration</h4>
                                     <p class="project-desc">
-                                        Migration of all data from CRM and support tools (Pipedrive, Planhat, and Intercom) to 
-                                        Salesforce by building comprehensive ETL pipelines with data validation and transformation.
+                                        Migrated all customer data from Pipedrive, Planhat, and Intercom to Salesforce. 
+                                        Employed Python to develop robust ETL pipelines for seamless transfer across 9 Salesforce 
+                                        objects (Leads, Accounts, Contacts, Opportunities, Tasks, Events, Campaigns, Cases, Conversations), 
+                                        contributing to 40% reduction in customer onboarding time.
                                     </p>
                                     <div class="project-tech">
                                         <span class="tech-badge">Python</span>
@@ -135,49 +163,27 @@
                         </a>
                     </div>
                     
-                    <!-- Project 3 -->
-                    <div class="col-lg-6">
-                        <a href="project-etl-monitoring.html" class="text-decoration-none">
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/project-3.jpg" alt="ETL Monitoring">
-                                </div>
-                                <div class="project-content">
-                                    <h4 class="project-title">ETL Processes Monitoring</h4>
-                                    <p class="project-desc">
-                                        Monitored the status of 6000+ running ETL processes by building automated dashboards. 
-                                        Implemented real-time alerts and performance metrics for data pipeline health.
-                                    </p>
-                                    <div class="project-tech">
-                                        <span class="tech-badge">SQL</span>
-                                        <span class="tech-badge">MySQL</span>
-                                        <span class="tech-badge">Power BI</span>
-                                    </div>
-                                    <p class="project-client"><strong>Client:</strong> Internal Project</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
                     <!-- Project 4 -->
                     <div class="col-lg-6">
                         <a href="project-claimlinker.html" class="text-decoration-none">
                             <div class="project-card">
                                 <div class="project-image">
-                                    <img src="images/project-4.jpg" alt="ClaimLinker">
+                                    <img src="images/project-4.jpg" alt="Claim Retrieval Research">
                                 </div>
                                 <div class="project-content">
-                                    <h4 class="project-title">ClaimLinker</h4>
+                                    <h4 class="project-title">Robust Claim Retrieval Research</h4>
                                     <p class="project-desc">
-                                        Linked text to a Knowledge Graph of fact-checked claims with an unsupervised approach by 
-                                        taking the average of eight textual similarity measures and elastic score to rank results.
+                                        Comprehensive research comparing 22 state-of-the-art claim retrieval methods across multiple 
+                                        benchmarks, demonstrating that unsupervised approaches achieve competitive performance with 
+                                        200x lower computational costs for online fact-checking applications.
                                     </p>
                                     <div class="project-tech">
-                                        <span class="tech-badge">Java</span>
+                                        <span class="tech-badge">Python</span>
                                         <span class="tech-badge">NLP</span>
-                                        <span class="tech-badge">Elasticsearch</span>
+                                        <span class="tech-badge">Transformers</span>
+                                        <span class="tech-badge">BERT</span>
                                     </div>
-                                    <p class="project-client"><strong>Client:</strong> Research Project</p>
+                                    <p class="project-client"><strong>Client:</strong> GESIS - Leibniz Institute</p>
                                 </div>
                             </div>
                         </a>

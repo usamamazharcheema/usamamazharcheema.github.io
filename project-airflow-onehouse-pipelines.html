@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airflow Onehouse Pipelines - Usama Mazhar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/devcard-style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <img src="images/usama.jpeg" alt="Usama Mazhar" class="profile-img">
+                <h1 class="profile-name">Usama Mazhar</h1>
+                <p class="profile-tagline">Data Engineer</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-user me-2"></i>About Me
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">
+                            <i class="fas fa-briefcase me-2"></i>Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item" style="display: none;">
+                        <a class="nav-link" href="resume.html">
+                            <i class="fas fa-file-alt me-2"></i>Resume
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-2"></i>Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="social-links" style="justify-content: center;">
+                    <a href="https://github.com/usamamazharcheema" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/usama-mazhar-851270149/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:usamamazharcheema@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Project Detail Section -->
+        <section class="section-content pt-5">
+            <div class="container-fluid">
+                <h1 class="section-title">Case Study: Airflow Onehouse Data Pipelines</h1>
+                
+                <p class="project-detail-intro">
+                    Architected a scalable, microservices-based data platform using Apache Airflow for orchestration, 
+                    AWS Onehouse (Apache Hudi) for lakehouse storage, and dedicated extraction/transformation microservices 
+                    to process data from 8+ sources including Salesforce, Pendo, Gong, Marketo, Zendesk, and Intercom. 
+                    Migrated from monolithic Python operators to deferrable sensors with async job processing to reduce 
+                    Airflow worker load by 70% while increasing pipeline concurrency.
+                </p>
+
+                <div class="row">
+                    <!-- Main Content -->
+                    <div class="col-lg-8">
+                        <!-- Client Info -->
+                        <div class="project-section">
+                            <div class="row align-items-stretch">
+                                <div class="col-md-4 mb-4 d-flex">
+                                    <img src="images/project-1.jpg" alt="Conductor GmbH" class="img-fluid rounded shadow-sm w-100" style="object-fit: cover; max-height: 350px;">
+                                </div>
+                                <div class="col-md-8 mb-4 d-flex flex-column">
+                                    <h3 class="mb-3">Conductor GmbH</h3>
+                                    <p class="mb-2"><i class="fas fa-briefcase me-2"></i><strong>Industry:</strong> SaaS / Marketing Technology</p>
+                                    <p class="mb-2"><i class="fas fa-users me-2"></i><strong>Size:</strong> 200+</p>
+                                    <p class="mb-2"><i class="fas fa-link me-2"></i><strong>Website:</strong> <a href="https://conductor.com" target="_blank">conductor.com</a></p>
+                                    <p class="mb-2"><i class="fas fa-calendar me-2"></i><strong>Project Date:</strong> Sep 2025 - Dec 2025</p>
+                                    
+                                    <p class="mb-0">
+                                        Conductor needed to build a modern Customer Data Platform (CDP) to consolidate data from multiple 
+                                        third-party sources into a centralized data lake. The existing monolithic Airflow architecture was 
+                                        becoming a bottleneck as data volumes grew and new sources were added. This project involved 
+                                        redesigning the entire data ingestion architecture using microservices, event-driven patterns, 
+                                        and cloud-native technologies.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <h4 class="mb-3">Project Requirements</h4>
+                            <ul>
+                                <li>Scalable data ingestion from 8+ third-party APIs with different rate limits and schemas</li>
+                                <li>Reliable data transformations with schema validation and type safety</li>
+                                <li>ACID-compliant data lake with time-travel and incremental processing capabilities</li>
+                                <li>Reduced Airflow worker resource consumption to support higher concurrency</li>
+                                <li>Centralized job monitoring and status tracking across distributed services</li>
+                                <li>Automated error handling, retries, and Slack notifications for failures</li>
+                                <li>Support for both discrete (snapshot) and continuous (incremental) data types</li>
+                            </ul>
+                        </div>
+
+                        <!-- The Goal -->
+                        <div class="project-section">
+                            <h3>The Goal</h3>
+                            <p>
+                                <strong>Build a production-grade Customer Data Platform (CDP)</strong> that can reliably ingest, transform, 
+                                and store data from multiple third-party sources at scale. The platform needed to support Conductor's 
+                                analytics, machine learning, and operational use cases while maintaining high data quality standards 
+                                and system reliability.
+                            </p>
+                            <p>
+                                The key business objective was to create a <strong>flexible, maintainable data infrastructure</strong> 
+                                that could adapt to new data sources without requiring major architectural changes. The technical goal 
+                                was to <strong>decouple orchestration from execution</strong> by moving heavy data processing out of 
+                                Airflow into dedicated microservices, allowing the platform to scale horizontally as data volumes increased.
+                            </p>
+                        </div>
+
+                        <!-- The Solution -->
+                        <div class="project-section">
+                            <h3>The Solution</h3>
+                            <p>
+                                The solution is a <strong>4-component microservices architecture</strong> where Apache Airflow serves 
+                                as the orchestration layer, managing the workflow through a standardized 4-task pipeline: Extract, 
+                                Format, Load, and Setup Stream. Each data source (Salesforce, Pendo, Gong, etc.) runs through this 
+                                same pipeline structure, ensuring consistency and maintainability.
+                            </p>
+                            <p>
+                                Instead of executing extraction and transformation logic directly in Airflow workers, the platform uses 
+                                <strong>deferrable sensors</strong> that create jobs via a Job API, which then distributes work to 
+                                dedicated microservices through SQS queues. This async pattern frees up Airflow workers to focus on 
+                                orchestration while specialized services handle the compute-intensive data processing operations.
+                            </p>
+                            
+                            <h4 class="mt-4 mb-3">System Architecture</h4>
+                            <div class="text-center mb-4">
+                                <img src="images/airflow-architecture.png" alt="Apache Airflow (MWAA) System Architecture" class="img-fluid rounded shadow" style="max-width: 100%; height: auto;">
+                            </div>
+                            <p class="text-muted">
+                                <strong>Architecture Overview:</strong> The system uses Apache Airflow (MWAA) to orchestrate Extract, Format, and Load tasks. 
+                                Each task communicates with Kubernetes-hosted microservices (Job API, Extraction, and Transformer services) via SQS messaging. 
+                                The modular design separates orchestration logic from compute-intensive data processing, enabling independent scaling and better resource utilization.
+                            </p>
+                        </div>
+
+                        <!-- The Challenge -->
+                        <div class="project-section">
+                            <h3>The Challenge</h3>
+                            <p>
+                                <strong>Performance Bottleneck:</strong> The original architecture ran all extraction and transformation 
+                                logic as Python operators directly in Airflow workers. As data volumes grew and more sources were added, 
+                                Airflow workers became CPU and memory constrained. Long-running extraction tasks blocked worker slots, 
+                                reducing overall pipeline concurrency. The system struggled to handle 8+ concurrent data source syncs, 
+                                leading to delayed data availability and frequent resource exhaustion alerts.
+                            </p>
+                            <p>
+                                <strong>Scalability Limitations:</strong> Each new data source required careful capacity planning to avoid 
+                                overwhelming Airflow. The monolithic design made it difficult to scale extraction and transformation 
+                                independently based on workload. API rate limiting from third-party sources (Salesforce, Pendo) caused 
+                                tasks to run for hours, tying up workers that could be used for other pipelines. The architecture couldn't 
+                                support horizontal scaling without adding more expensive Airflow worker nodes.
+                            </p>
+                            <p>
+                                <strong>Operational Complexity:</strong> Debugging failed extractions required digging through Airflow logs 
+                                across multiple worker nodes. There was no centralized view of job status across distributed extraction tasks. 
+                                Retries and error handling were tightly coupled with Airflow's task retry logic, making it hard to implement 
+                                custom retry strategies. Schema changes from third-party APIs would break downstream transformations, requiring 
+                                manual intervention and pipeline reruns.
+                            </p>
+                        </div>
+
+                        <!-- The Approach & Solution -->
+                        <div class="project-section">
+                            <h3>The Approach & Solution</h3>
+                            <p>
+                                I led the architectural redesign to decompose the monolithic pipeline into a microservices-based platform 
+                                with clear separation of concerns. The solution involved building three new components while preserving 
+                                Airflow as the orchestration layer.
+                            </p>
+                            
+                            <h5>1. CDP-Extractor Microservice (Python 3.11)</h5>
+                            <ul>
+                                <li><strong>Event-Driven Architecture:</strong> Long-running service that polls SQS queues for extraction 
+                                jobs, decoupling execution from Airflow scheduling</li>
+                                
+                                <li><strong>API Client Abstraction:</strong> Built reusable API clients for each data source (Salesforce, 
+                                Pendo, Gong, Marketo, Zendesk, Intercom, Meltingspot, Catalyst) with standardized authentication, 
+                                rate limiting, and retry logic</li>
+                                
+                                <li><strong>Resilient Data Extraction:</strong> 
+                                    <ul>
+                                        <li>Configurable retry strategies with exponential backoff for transient API failures</li>
+                                        <li>Rate limit handling that respects third-party API constraints (429 responses)</li>
+                                        <li>Pagination support for large result sets with memory-efficient streaming</li>
+                                        <li>Request/response logging for debugging API integration issues</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>Data Staging:</strong> Writes raw data to S3 in CSV (gzipped for 60% compression) or JSON 
+                                format with consistent naming conventions for downstream processing</li>
+                                
+                                <li><strong>Job Status Tracking:</strong> Updates job lifecycle via CDP-Job-API: 
+                                CREATED → PROCESSING → COMPLETED/FAILED with error messages for debugging</li>
+                            </ul>
+                            
+                            <h5>2. CDP-Transformer Microservice (Python 3.11)</h5>
+                            <ul>
+                                <li><strong>Schema-Driven Transformations:</strong> Uses PyArrow schemas defined for each data source/structure 
+                                combination to enforce type safety and data quality</li>
+                                
+                                <li><strong>Data Validation & Cleaning:</strong>
+                                    <ul>
+                                        <li>Type conversion with error handling for malformed data</li>
+                                        <li>Null value handling and default value population</li>
+                                        <li>Column name normalization and case standardization</li>
+                                        <li>Missing column detection with automatic schema filling</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>Parquet Optimization:</strong> Converts raw CSV/JSON to Parquet format with ZSTD compression 
+                                (4x better compression than gzip, 2x faster query performance)</li>
+                                
+                                <li><strong>Time-Based Partitioning:</strong> Adds time-based partitioning columns for efficient time-range 
+                                queries in Athena/Hudi, enabling partition pruning and faster query performance</li>
+                                
+                                <li><strong>Error Handling:</strong> Catches transformation errors per-record, logs failures to S3, 
+                                and continues processing valid records (partial success model)</li>
+                            </ul>
+                            
+                            <h5>3. CDP-Job-API (FastAPI)</h5>
+                            <ul>
+                                <li><strong>Centralized Job Management:</strong> RESTful API providing CRUD operations for job tracking 
+                                across all microservices</li>
+                                
+                                <li><strong>API Endpoints:</strong>
+                                    <ul>
+                                        <li><code>POST /v1/job/{service}/</code> - Create job and send SQS message</li>
+                                        <li><code>GET /v1/job/{service}/{id}/</code> - Get job status and metadata</li>
+                                        <li><code>POST /v1/job/{service}/{id}/</code> - Update job status with error info</li>
+                                        <li><code>GET /v1/job/{service}/</code> - List all jobs for monitoring dashboard</li>
+                                        <li><code>DELETE /v1/job/{service}/{id}/</code> - Clean up completed jobs</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>SQS Integration:</strong> Sends messages to appropriate service queues (extractor/transformer) 
+                                with job specifications and metadata</li>
+                                
+                                <li><strong>Swagger Documentation:</strong> Auto-generated API docs at <code>/docs</code> for easy 
+                                integration and testing</li>
+                            </ul>
+                            
+                            <h5>4. Airflow Deferrable Sensors</h5>
+                            <ul>
+                                <li><strong>Custom Sensor Implementation:</strong> Built custom deferrable sensors that poll CDP-Job-API 
+                                for job completion without blocking worker slots</li>
+                                
+                                <li><strong>Async Pattern:</strong> Sensors "defer" to Airflow's triggerer process, which uses async/await 
+                                to check job status every 30 seconds across hundreds of concurrent jobs</li>
+                                
+                                <li><strong>Worker Efficiency:</strong> Reduced worker slot usage from "entire task duration" to 
+                                "seconds of actual work" (job creation + status check)</li>
+                                
+                                <li><strong>Failure Handling:</strong> Sensors timeout after configurable duration, marking tasks as 
+                                failed if microservices don't complete</li>
+                            </ul>
+                            
+                            <h5>5. Onehouse Integration</h5>
+                            <ul>
+                                <li><strong>Load Task:</strong> Simple S3-to-S3 copy operation moving Parquet files from staging bucket 
+                                to Onehouse ingestion bucket for lakehouse processing</li>
+                                
+                                <li><strong>Setup Stream Task:</strong> Calls Onehouse API to create stream captures and configure 
+                                Apache Hudi table properties:
+                                    <ul>
+                                        <li>Primary keys for upsert operations</li>
+                                        <li>Partition keys for query performance optimization</li>
+                                        <li>Incremental processing settings for CDC</li>
+                                        <li>Table type configuration (Copy-on-Write vs Merge-on-Read)</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>Automated Ingestion:</strong> Onehouse monitors the ingestion bucket and automatically processes 
+                                new Parquet files into Hudi tables with ACID guarantees</li>
+                            </ul>
+                        </div>
+
+                        <!-- The Results -->
+                        <div class="project-section">
+                            <h3>The Results</h3>
+                            
+                            <div class="project-metrics">
+                                <div class="metric-card">
+                                    <h4>70%</h4>
+                                    <p class="metric-label">Worker Load Reduction</p>
+                                    <p class="metric-desc">Freed up Airflow resources</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>8+</h4>
+                                    <p class="metric-label">Data Sources</p>
+                                    <p class="metric-desc">Integrated APIs</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>4</h4>
+                                    <p class="metric-label">Microservices</p>
+                                    <p class="metric-desc">Component architecture</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>3x</h4>
+                                    <p class="metric-label">Pipeline Concurrency</p>
+                                    <p class="metric-desc">Parallel execution capacity</p>
+                                </div>
+                            </div>
+
+                            <h4>Technical Achievements</h4>
+                            <ul>
+                                <li><strong>Architecture Migration:</strong> Successfully migrated from monolithic Python operators to 
+                                microservices-based architecture with zero data loss and minimal downtime</li>
+                                
+                                <li><strong>Performance Improvements:</strong> Reduced Airflow worker CPU usage from 85% average to 25% 
+                                by offloading extraction/transformation to dedicated services</li>
+                                
+                                <li><strong>Scalability:</strong> Platform now supports independent scaling of extraction (CPU-intensive) 
+                                and transformation (memory-intensive) workloads based on demand</li>
+                                
+                                <li><strong>Reliability:</strong> Implemented retry logic, error handling, and job status tracking that 
+                                reduced pipeline failure rate from 12% to under 2%</li>
+                                
+                                <li><strong>Data Quality:</strong> PyArrow schema validation catches data quality issues at transformation 
+                                stage, preventing bad data from reaching analytics consumers</li>
+                                
+                                <li><strong>Developer Experience:</strong> Config-driven DAG generation means adding new data sources 
+                                requires only JSON configuration—no Airflow code changes needed</li>
+                            </ul>
+
+                            <h4>Business Impact</h4>
+                            <p>
+                                The new architecture enabled Conductor to scale their data platform without proportional infrastructure 
+                                costs. The microservices pattern allows the data engineering team to add new data sources in days instead 
+                                of weeks, accelerating time-to-insight for analytics and machine learning teams. Improved reliability 
+                                and monitoring reduced on-call incidents by 60%, allowing the team to focus on new feature development 
+                                rather than firefighting production issues.
+                            </p>
+                            <p>
+                                The platform's flexibility proved critical during a major product launch when the team needed to integrate 
+                                three new data sources (Catalyst, Meltingspot, CWM Config) in under two weeks. The modular architecture 
+                                made this possible without impacting existing pipelines or requiring additional infrastructure investment.
+                            </p>
+                        </div>
+
+                        <!-- Technical Deep Dive -->
+                        <div class="project-section">
+                            <h3>Technical Deep Dive</h3>
+                            
+                            <h4>Deferrable Sensor Pattern</h4>
+                            <p>
+                                The migration to deferrable sensors was key to reducing Airflow worker load. Traditional sensors use a 
+                                "poke" interval to repeatedly check if a condition is met, but the worker slot remains occupied during 
+                                the entire wait period. Deferrable sensors use Python's async/await to surrender the worker slot between 
+                                checks, allowing one worker to monitor hundreds of jobs concurrently.
+                            </p>
+                            <p>
+                                Implementation involved creating custom sensor classes that inherit from the base sensor operator with 
+                                deferrable mode enabled. The sensor's execute method creates a job via CDP-Job-API, then defers execution 
+                                with a trigger that polls the API every 30 seconds. When the job completes, the trigger fires an event 
+                                that resumes the task for final validation and downstream triggering.
+                            </p>
+                            
+                            <h4>SQS-Based Async Communication</h4>
+                            <p>
+                                SQS queues provide reliable message delivery between Airflow and microservices. Each service has a 
+                                dedicated queue with configurable visibility timeout and dead-letter queue (DLQ) for failed messages. 
+                                The Job API sends messages after creating job records, ensuring that even if a microservice is temporarily 
+                                down, jobs are processed when it comes back online.
+                            </p>
+                            <p>
+                                Microservices use long polling (20-second wait) to efficiently receive messages without constant API 
+                                calls. Upon receiving a message, the service updates the job status to PROCESSING, executes the work, 
+                                updates status to COMPLETED, and deletes the message from the queue. If processing fails, the message 
+                                returns to the queue after visibility timeout for automatic retry.
+                            </p>
+                            
+                            <h4>Schema Management with PyArrow</h4>
+                            <p>
+                                Each data source has predefined PyArrow schemas stored in the transformer service. These schemas define 
+                                column names, data types, and constraints. During transformation, the service reads raw data, applies 
+                                schema validation, and converts types (e.g., string dates to timestamps, numeric strings to integers).
+                            </p>
+                            <p>
+                                Schema evolution is supported through version management—when a source adds new fields, we create a new 
+                                schema version and configure the pipeline to use it. The PyArrow library handles backward compatibility, 
+                                allowing old Parquet files with fewer columns to coexist with new files in the same Hudi table.
+                            </p>
+                            
+                            <h4>Onehouse Stream Capture Configuration</h4>
+                            <p>
+                                The Setup Stream task calls Onehouse's REST API to register stream captures for each table. Configuration 
+                                includes Hudi table type (Copy-on-Write for read-heavy workloads, Merge-on-Read for write-heavy), primary 
+                                key specification for upserts, partition keys for query performance, and CDC settings for incremental 
+                                processing. Once configured, Onehouse monitors the ingestion bucket and automatically processes new files.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="info-card sticky-top" style="top: 20px;">
+                            <h4 class="info-title">Project Info</h4>
+                            <ul class="info-list">
+                                <li><strong>Client:</strong> Conductor GmbH</li>
+                                <li><strong>Duration:</strong> 4 months</li>
+                                <li><strong>Role:</strong> Senior Data Engineer</li>
+                                <li><strong>Year:</strong> Sep 2025 - Dec 2025</li>
+                            </ul>
+
+                            <h4 class="info-title mt-4">Technologies</h4>
+                            <div class="mb-3">
+                                <span class="tech-badge">Apache Airflow</span>
+                                <span class="tech-badge">Python 3.11</span>
+                                <span class="tech-badge">FastAPI</span>
+                                <span class="tech-badge">PyArrow</span>
+                                <span class="tech-badge">AWS MWAA</span>
+                                <span class="tech-badge">AWS S3</span>
+                                <span class="tech-badge">AWS SQS</span>
+                                <span class="tech-badge">AWS Athena</span>
+                                <span class="tech-badge">Onehouse</span>
+                                <span class="tech-badge">Apache Hudi</span>
+                                <span class="tech-badge">AWS Athena</span>
+                                <span class="tech-badge">Parquet</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">Kubernetes</span>
+                                <span class="tech-badge">Microservices</span>
+                                <span class="tech-badge">Event-Driven</span>
+                            </div>
+
+                            <h4 class="info-title mt-4">Data Sources</h4>
+                            <div class="mb-3">
+                                <span class="tech-badge">Salesforce</span>
+                                <span class="tech-badge">Pendo</span>
+                                <span class="tech-badge">Gong</span>
+                                <span class="tech-badge">Marketo</span>
+                                <span class="tech-badge">Zendesk</span>
+                                <span class="tech-badge">Intercom</span>
+                                <span class="tech-badge">Meltingspot</span>
+                                <span class="tech-badge">Catalyst</span>
+                            </div>
+
+                            <a href="index.html#projects" class="btn btn-outline-primary w-100 mt-3">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="project-cta">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Want me to help with your project?</h2>
+                        <p class="lead">
+                            I specialize in building scalable data pipelines and microservices architectures. 
+                            Let's discuss how I can help bring your data vision to life.
+                        </p>
+                        <a href="index.html#contact" class="btn btn-primary btn-lg">
+                            <i class="fas fa-envelope me-2"></i>Hire Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Usama Mazhar. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/devcard-script.js"></script>
+</body>
+</html>
