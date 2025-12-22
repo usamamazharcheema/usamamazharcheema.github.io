@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Trial Activity Pipeline - Usama Mazhar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/devcard-style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <img src="images/usama.jpeg" alt="Usama Mazhar" class="profile-img">
+                <h1 class="profile-name">Usama Mazhar</h1>
+                <p class="profile-tagline">Data Engineer</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-user me-2"></i>About Me
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">
+                            <i class="fas fa-briefcase me-2"></i>Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item" style="display: none;">
+                        <a class="nav-link" href="resume.html">
+                            <i class="fas fa-file-alt me-2"></i>Resume
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-2"></i>Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="social-links">
+                    <a href="https://github.com/usamamazharcheema" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/usama-mazhar-851270149/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:usamamazhar200@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle d-lg-none">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Project Header -->
+        <section class="section-content">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="projects.html">Projects</a></li>
+                        <li class="breadcrumb-item active">User Trial Activity Pipeline</li>
+                    </ol>
+                </nav>
+                
+                <h1 class="section-title">Case Study: User Trial Activity & PQL Scoring Pipeline</h1>
+                
+                <p class="project-detail-intro">
+                    Engineered a comprehensive trial user analytics sync that tracks product adoption across free trial accounts, 
+                    calculates Product Qualified Lead (PQL) scores using multi-factor engagement algorithms, and syncs behavioral 
+                    insights to Salesforce for sales qualification—integrating Pendo product analytics, Zendesk support interactions, 
+                    and custom dbt transformation logic to identify high-intent trial users ready for sales conversion.
+                </p>
+
+                <div class="row">
+                    <!-- Main Content -->
+                    <div class="col-lg-8">
+                        <!-- Client Info -->
+                        <div class="project-section">
+                            <div class="row align-items-stretch">
+                                <div class="col-md-4 mb-4 d-flex">
+                                    <img src="images/project-5.jpg" alt="Conductor GmbH" class="img-fluid rounded shadow-sm w-100" style="object-fit: cover; max-height: 350px;">
+                                </div>
+                                <div class="col-md-8 mb-4 d-flex flex-column">
+                                    <h3 class="mb-3">Conductor GmbH</h3>
+                                    <p class="mb-2"><i class="fas fa-briefcase me-2"></i><strong>Industry:</strong> SaaS / Marketing Technology</p>
+                                    <p class="mb-2"><i class="fas fa-users me-2"></i><strong>Size:</strong> 200+</p>
+                                    <p class="mb-3"><i class="fas fa-link me-2"></i><strong>Website:</strong> <a href="https://conductor.com" target="_blank">conductor.com</a></p>
+                                    <p class="mb-2"><i class="fas fa-calendar me-2"></i><strong>Project Date:</strong> Jan 2025 - Feb 2025</p>
+                                    
+                                    <p class="mb-0">
+                                        Conductor offers a 14-day free trial of their enterprise SEO platform, generating hundreds of trial signups 
+                                        monthly. This project built an automated system to track trial user behavior, calculate lead quality scores 
+                                        based on product engagement patterns, and provide sales teams with data-driven insights to prioritize 
+                                        outreach and improve trial-to-paid conversion rates.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <h4 class="mb-3">Key Requirements</h4>
+                            <ul>
+                                <li>Track comprehensive trial user behavior including feature adoption (page groups, keyword tracking, workspaces), 
+                                integration setup (Google Search Console, Analytics), and engagement patterns (active hours, explorer searches, 
+                                content creation)</li>
+                                
+                                <li>Calculate Product Qualified Lead (PQL) scores using a weighted algorithm that evaluates 15+ behavioral signals 
+                                including hand-raise events, teammate invitations, support interactions, and platform usage depth</li>
+                                
+                                <li>Link trial activity data across multiple systems—matching Pendo visitor IDs with Salesforce contacts, connecting 
+                                Searchlight internal account IDs with trial account identifiers, and correlating Zendesk support tickets with user engagement</li>
+                                
+                                <li>Identify conversion indicators like trial hand-raise events (demo requests), pricing page inquiries, and in-app 
+                                conversion attempts to prioritize sales follow-up</li>
+                                
+                                <li>Sync trial activity metrics and PQL scores to Salesforce User Trial Activity objects, enabling sales reps to 
+                                view engagement history and lead quality directly in their CRM workflow</li>
+                                
+                                <li>Track trial lifecycle status (active, expired, converted) with key dates (initiated, user created, end date, 
+                                first/last login) for accurate funnel analysis and conversion attribution</li>
+                                
+                                <li>Maintain data accuracy by handling trial source attribution (organic, PLG, marketing campaigns), excluding internal 
+                                test accounts, and managing late-arriving data from various API sources</li>
+                            </ul>
+                        </div>
+
+                        <!-- Project Overview -->
+                        <div class="project-section">
+                            <h3>Project Overview</h3>
+                            <p>
+                                <strong>The Goal:</strong> Build an intelligent trial qualification system that automatically identifies which free 
+                                trial users show genuine purchase intent based on their product usage patterns. The platform helps Conductor's sales 
+                                team focus their limited time on the most promising leads rather than manually reviewing hundreds of trial signups, 
+                                while also providing insights into which features and behaviors correlate with successful conversions.
+                            </p>
+                            <p>
+                                <strong>The Solution:</strong> The system captures granular behavioral data from Pendo (product analytics), Zendesk 
+                                (support engagement), and Salesforce (trial account records), then applies a custom PQL scoring algorithm that weighs 
+                                15+ engagement factors. High-value actions like inviting teammates (9 points), integrating Google Search Console 
+                                (20 points), or connecting analytics platforms (30 points) signal serious evaluation intent. Lower-friction activities 
+                                like creating workspaces (1 point per workspace) or tracking keywords (1 point per 10 keywords) demonstrate feature 
+                                adoption. The algorithm caps individual factor contributions to prevent score manipulation while accumulating evidence 
+                                of genuine product-market fit.
+                            </p>
+                            <p>
+                                Technically, this is implemented as a multi-stage dbt transformation pipeline with 12 intermediate models that progressively 
+                                enrich trial data—starting from raw Pendo events, aggregating usage metrics, calculating individual PQL factor scores, 
+                                applying business logic for hand-raise detection and conversion tracking, then formatting the final dataset for Salesforce 
+                                sync. The database-agnostic dbt architecture runs on AWS Athena querying the Onehouse data lake, with custom macros 
+                                abstracting SQL functions to maintain portability across potential database migrations.
+                            </p>
+                            
+                            <h4 class="mt-4 mb-3">System Architecture</h4>
+                            <div style="background: linear-gradient(135deg, #54B689 0%, #3a8a65 100%); padding: 30px; border-radius: 12px; overflow-x: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                                <pre style="margin: 0; line-height: 1.8; color: #ffffff; font-size: 14px;">
+    <span style="color: #ffd700;">╔═══════════════════════════════════════════════════════════════════════╗</span>
+    <span style="color: #ffd700;">║</span>                      <span style="font-weight: bold; color: #fff;">🌐 DATA SOURCES LAYER</span>                        <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╠═══════════════════════════════════════════════════════════════════════╣</span>
+    <span style="color: #ffd700;">║</span>   <span style="color: #90EE90;">📊 Pendo Analytics</span>            <span style="color: #90EE90;">🎫 Zendesk Support</span>          <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   └─ Visitor Events,              └─ Support Tickets,            <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>      Feature Usage,                  User Interactions,          <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>      Page Views,                     Engagement History          <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>      Account Metadata                                            <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>                                                                   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   <span style="color: #90EE90;">📋 Salesforce CRM</span>                                               <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   └─ Trial Accounts, Contacts, Account Records                  <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╚═══════════════════════════════════════════════════════════════════════╝</span>
+                                    <span style="color: #87CEEB;">│</span>
+                                    <span style="color: #87CEEB;">▼</span>
+    <span style="color: #ffd700;">╔═══════════════════════════════════════════════════════════════════════╗</span>
+    <span style="color: #ffd700;">║</span>                 <span style="font-weight: bold; color: #fff;">⚙️  ORCHESTRATION & ETL LAYER</span>                    <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╠═══════════════════════════════════════════════════════════════════════╣</span>
+    <span style="color: #ffd700;">║</span>                      <span style="color: #FFB6C1;">Apache Airflow</span>                             <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   ┌──────────────────────────────────────────────────────────┐   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 🔄 Pendo API Extractors     │  🎫 Zendesk Integration│   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 📊 Event Stream Processing  │  ⏱️  Daily Scheduling  │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 🔌 Salesforce CDC           │  🔔 Error Monitoring   │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   └──────────────────────────────────────────────────────────┘   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╚═══════════════════════════════════════════════════════════════════════╝</span>
+                                    <span style="color: #87CEEB;">│</span>
+                                    <span style="color: #87CEEB;">▼</span>
+    <span style="color: #ffd700;">╔═══════════════════════════════════════════════════════════════════════╗</span>
+    <span style="color: #ffd700;">║</span>                  <span style="font-weight: bold; color: #fff;">💾 LAKEHOUSE STORAGE LAYER</span>                      <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╠═══════════════════════════════════════════════════════════════════════╣</span>
+    <span style="color: #ffd700;">║</span>           <span style="color: #98FB98;">AWS Onehouse + Apache Hudi + AWS Athena</span>              <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   ┌──────────────────────────────────────────────────────────┐   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ ⚡ Event Stream Storage     │  🔍 SQL Query Engine   │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 🔒 ACID Compliance          │  📦 Parquet Format     │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 🔄 Trial Data Versioning    │  ⏰ Historical Lookups │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   └──────────────────────────────────────────────────────────┘   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╚═══════════════════════════════════════════════════════════════════════╝</span>
+                                    <span style="color: #87CEEB;">│</span>
+                                    <span style="color: #87CEEB;">▼</span>
+    <span style="color: #ffd700;">╔═══════════════════════════════════════════════════════════════════════╗</span>
+    <span style="color: #ffd700;">║</span>                <span style="font-weight: bold; color: #fff;">🔧 TRANSFORMATION & ANALYTICS LAYER</span>               <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╠═══════════════════════════════════════════════════════════════════════╣</span>
+    <span style="color: #ffd700;">║</span>                        <span style="color: #FFA07A;">dbt (Data Build Tool)</span>                       <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   ┌──────────────────────────────────────────────────────────┐   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 🧹 Trial Status Models      │  🎯 PQL Scoring Logic  │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 📊 Usage Aggregations       │  🏆 Hand-Raise Events  │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 🔗 Cross-System Linking     │  ✅ Data Quality Tests │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 💯 15+ PQL Factor Calcs     │  📈 Conversion Tracking│   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   └──────────────────────────────────────────────────────────┘   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╚═══════════════════════════════════════════════════════════════════════╝</span>
+                                    <span style="color: #87CEEB;">│</span>
+                                    <span style="color: #87CEEB;">▼</span>
+    <span style="color: #ffd700;">╔═══════════════════════════════════════════════════════════════════════╗</span>
+    <span style="color: #ffd700;">║</span>                  <span style="font-weight: bold; color: #fff;">🎯 OPERATIONAL DELIVERY LAYER</span>                  <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╠═══════════════════════════════════════════════════════════════════════╣</span>
+    <span style="color: #ffd700;">║</span>               <span style="color: #ADD8E6;">Salesforce CRM (via AWS AppFlow)</span>                  <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   ┌──────────────────────────────────────────────────────────┐   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 📤 Daily Trial Activity Sync│  🎯 PQL Score Updates  │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 🔄 User Behavior Metrics    │  📊 Sales Dashboards   │   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   │ 🚨 High-Intent Lead Alerts  │  📈 Conversion Tracking│   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">║</span>   └──────────────────────────────────────────────────────────┘   <span style="color: #ffd700;">║</span>
+    <span style="color: #ffd700;">╚═══════════════════════════════════════════════════════════════════════╝</span>
+                </pre>
+                            </div>
+                            
+                            <p class="mt-4">
+                                The pipeline processes trial user behavior across 12 intermediate dbt models: starting with user trial status tracking 
+                                (trial dates, source attribution, conversion state), calculating individual PQL factors (hand-raise events, page groups, 
+                                teammates, keyword tracking, integrations, support engagement, usage metrics), aggregating Pendo events (explorer searches, 
+                                workspace activity, content creation), linking Salesforce contact records, and formatting the final output with weighted 
+                                PQL scores (0-500+ scale) and human-readable factor explanations for sales context.
+                            </p>
+                        </div>
+
+                        <!-- The Challenge -->
+                        <div class="project-section">
+                            <h3>The Challenge</h3>
+                            <p>
+                                Conductor's sales team faced a critical lead qualification problem: with hundreds of trial signups monthly, 
+                                representatives couldn't manually review each trial user's activity to identify serious buyers. Trial users who 
+                                simply logged in once differed fundamentally from those setting up integrations, inviting teammates, and actively 
+                                exploring features—but this behavioral intelligence was scattered across Pendo analytics, Zendesk support tickets, 
+                                and Salesforce CRM records with no unified scoring system to prioritize sales outreach.
+                            </p>
+                            <p>
+                                <strong>Data Integration Challenges:</strong> Building the qualification system required linking trial user identities 
+                                across three disparate platforms with different ID schemes. Pendo tracked users by visitor IDs and account IDs, Salesforce 
+                                stored contacts with 18-character IDs and custom SL User ID fields, while internal systems used Searchlight account 
+                                identifiers. The pipeline needed to resolve these mappings accurately to attribute behavior correctly, handle users 
+                                appearing in one system but not others (partial trial completions), and manage the temporal complexity of trials starting, 
+                                expiring, and converting at different times across systems.
+                            </p>
+                            <p>
+                                <strong>Behavioral Signal Complexity:</strong> Product Qualified Lead scoring required translating raw event data into 
+                                meaningful engagement signals. Pendo captured granular events (page views, button clicks, feature usage) that needed 
+                                aggregation into business-relevant metrics. The system had to distinguish between different types of engagement—creating 
+                                a workspace (low friction, 1 point) versus integrating Google Search Console (high intent, 20 points)—and apply 
+                                appropriate weights reflecting conversion correlation. Certain actions needed ceiling caps (max 40 points for page groups, 
+                                max 90 points for support interactions) to prevent score manipulation while still rewarding genuine power usage.
+                            </p>
+                            <p>
+                                <strong>Temporal and State Management Challenges:</strong> Trial lifecycle tracking introduced complex temporal logic. 
+                                The system needed to capture trial initiation dates, user creation timestamps, end dates, first/last login times, and 
+                                hand-raise event dates—all from different source systems with potential clock skew. Trial status (active, expired, converted) 
+                                changed over time, requiring logic to determine current state. Conversion attribution (trial hand-raise, pricing inquiry, 
+                                in-app conversion) needed tracking across multiple touch points, and the system had to handle trials extending beyond initial 
+                                periods, users rejoining after trial expiration, and enterprise deals closing months after trial end.
+                            </p>
+                            <p>
+                                <strong>Sales Enablement Requirements:</strong> Beyond just calculating scores, the system needed to provide actionable 
+                                context for sales reps. High PQL scores alone didn't explain <em>why</em> a lead qualified—was it integration setup? 
+                                Teammate invitations? Feature depth? The pipeline needed to surface individual factor contributions and present them in 
+                                Salesforce in formats sales teams could quickly understand during prospecting calls. Additionally, the system had to sync 
+                                30+ behavioral metrics (active days, active hours, explorer searches, workspace activity, etc.) alongside PQL scores to 
+                                enable conversation starters and personalized outreach based on specific product usage patterns.
+                            </p>
+                        </div>
+
+                        <!-- The Approach & Solution -->
+                        <div class="project-section">
+                            <h3>The Approach & Solution</h3>
+                            <p>
+                                I architected a multi-stage dbt transformation pipeline with 12 intermediate models that progressively build trial 
+                                user intelligence—starting from raw event data, through identity resolution and behavioral aggregation, to final 
+                                PQL scoring and Salesforce formatting. The modular design allows independent testing and modification of each 
+                                transformation stage while maintaining end-to-end data lineage.
+                            </p>
+                            
+                            <h5>1. Trial Status Foundation (_user_trial_activity_user_trials_status)</h5>
+                            <ul>
+                                <li><strong>Trial Lifecycle Tracking:</strong> Established baseline trial records with key temporal markers—trial 
+                                initiated date, user created date, trial end date—pulled from Pendo account metadata and Salesforce trial records</li>
+                                
+                                <li><strong>Source Attribution:</strong> Captured trial source (organic signup, PLG motion, marketing campaign) and 
+                                trial origin to enable funnel analysis and channel ROI tracking</li>
+                                
+                                <li><strong>Status Management:</strong> Implemented logic to calculate current trial status (active, expired, converted) 
+                                based on date comparisons and conversion event detection</li>
+                                
+                                <li><strong>Identity Anchoring:</strong> Established primary keys (SL User ID, Account Searchlight ID, Account Trial ID) 
+                                used for joining across all downstream models</li>
+                            </ul>
+                            
+                            <h5>2. Behavioral Signal Extraction</h5>
+                            <ul>
+                                <li><strong>Pendo Usage Aggregation:</strong> Built dedicated models for different Pendo event types—tracking active 
+                                hours/days, page views, feature interactions—aggregated at trial account and user level</li>
+                                
+                                <li><strong>Feature Adoption Tracking:</strong> Created specialized models for high-value features:
+                                    <ul>
+                                        <li><strong>Page Groups:</strong> Count of content organization structures created by user (4 points each, max 40)</li>
+                                        <li><strong>Keyword Tracking:</strong> Number of SEO keywords added to monitoring (1 point per 10 keywords, max 25)</li>
+                                        <li><strong>Workspaces:</strong> Collaboration spaces created (1 point each), shared (counted separately), viewed (tracked for engagement)</li>
+                                        <li><strong>Search Integrations:</strong> Google Search Console connection (20 points)—strong purchase intent signal</li>
+                                        <li><strong>Analytics Integrations:</strong> Google Analytics linking (30 points)—highest-weighted single factor</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>Collaboration Indicators:</strong> Tracked teammate invitations (3 points each, max 9) as proxy for 
+                                team-level evaluation rather than individual exploration</li>
+                                
+                                <li><strong>Support Engagement:</strong> Integrated Zendesk ticket data to count support interactions (30 points each, 
+                                max 90) indicating users invested enough to seek help</li>
+                            </ul>
+                            
+                            <h5>3. PQL Scoring Engine (_user_trial_activity_pql_scores)</h5>
+                            <ul>
+                                <li><strong>Multi-Factor Algorithm:</strong> Implemented weighted scoring system evaluating 15+ behavioral dimensions:
+                                    <ul>
+                                        <li>Hand-raise events (demo requests): 100 points</li>
+                                        <li>Analytics integration: 30 points</li>
+                                        <li>Support engagement: up to 90 points (30 per interaction)</li>
+                                        <li>Search console integration: 20 points</li>
+                                        <li>Page groups created: up to 40 points (4 per group)</li>
+                                        <li>Websites added: up to 12 points (4 per site)</li>
+                                        <li>Teammates invited: up to 9 points (3 per teammate)</li>
+                                        <li>Plus 8 more factors tracking content creation, workspace activity, explorer usage, keyword groups</li>
+                                    </ul>
+                                </li>
+                                
+                                <li><strong>Score Calibration:</strong> Applied ceiling caps to individual factors preventing score manipulation while 
+                                allowing genuine power users to accumulate high scores through diverse engagement</li>
+                                
+                                <li><strong>Factor Explanation Generation:</strong> Built human-readable score breakdowns showing contribution of each 
+                                factor (e.g., "Hand Raise: 100 | Analytics Integration: 30 | Support: 60") for sales context</li>
+                                
+                                <li><strong>Qualification Thresholds:</strong> Implemented PQL_ED flag (Product Qualified Lead - Enterprise Deal) for 
+                                scores exceeding configurable threshold, triggering priority sales routing</li>
+                            </ul>
+                            
+                            <h5>4. Conversion Event Tracking</h5>
+                            <ul>
+                                <li><strong>Hand-Raise Detection:</strong> Captured explicit purchase interest signals—demo requests, sales inquiry 
+                                forms, enterprise trial extensions—with timestamps for conversion attribution</li>
+                                
+                                <li><strong>Pricing Page Behavior:</strong> Tracked pricing page visits, package selections, inquiry comments 
+                                indicating evaluation of purchase options</li>
+                                
+                                <li><strong>In-App Conversion Attempts:</strong> Monitored self-service upgrade flows, payment page views, package 
+                                selection events showing direct purchase intent</li>
+                                
+                                <li><strong>Temporal Correlation:</strong> Linked conversion events back to trial periods to attribute conversions 
+                                correctly even when deals closed after trial expiration</li>
+                            </ul>
+                            
+                            <h5>5. Salesforce Integration & Formatting</h5>
+                            <ul>
+                                <li><strong>Contact Resolution:</strong> Mapped Pendo visitor IDs to Salesforce 18-character Contact IDs via 
+                                intermediate linking table, handling missing mappings gracefully</li>
+                                
+                                <li><strong>Schema Transformation:</strong> Formatted 30+ behavioral metrics and PQL scores into Salesforce-compatible 
+                                field structure with proper data types and naming conventions</li>
+                                
+                                <li><strong>Upsert Logic:</strong> Implemented unique key generation (User Trial Activity External ID) to update 
+                                existing records and create new ones without duplication</li>
+                                
+                                <li><strong>Daily Sync Cadence:</strong> Configured AWS AppFlow to refresh User Trial Activity objects nightly, 
+                                ensuring sales teams see current engagement data</li>
+                            </ul>
+                            
+                            <h5>6. Database-Agnostic Architecture</h5>
+                            <ul>
+                                <li><strong>Custom Macro Layer:</strong> Abstracted all database-specific SQL functions (date formatting, string 
+                                operations, casting, aggregations) into reusable dbt macros supporting Athena, StarRocks, and SQLite</li>
+                                
+                                <li><strong>Testing Framework:</strong> Built comprehensive test suite running against SQLite with CSV fixtures, 
+                                enabling CI/CD validation without requiring live AWS infrastructure</li>
+                                
+                                <li><strong>Documentation:</strong> Generated dbt docs with data lineage diagrams, column descriptions, and 
+                                transformation logic for knowledge transfer and maintenance</li>
+                            </ul>
+                        </div>
+
+                        <!-- The Results -->
+                        <div class="project-section">
+                            <h3>The Results</h3>
+                            
+                            <div class="project-metrics">
+                                <div class="metric-card">
+                                    <h4>3</h4>
+                                    <p class="metric-label">Data Sources</p>
+                                    <p class="metric-desc">Pendo, Zendesk, Salesforce</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>12</h4>
+                                    <p class="metric-label">dbt Models</p>
+                                    <p class="metric-desc">Intermediate transformations</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>15+</h4>
+                                    <p class="metric-label">PQL Factors</p>
+                                    <p class="metric-desc">Behavioral signals tracked</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>30+</h4>
+                                    <p class="metric-label">Behavioral Metrics</p>
+                                    <p class="metric-desc">Synced to Salesforce daily</p>
+                                </div>
+                            </div>
+
+                            <h4 class="mt-4 mb-3">Business Impact & Results</h4>
+                            
+                            <p>
+                                <strong>Sales Efficiency Transformation:</strong> The PQL scoring system fundamentally changed how Conductor's sales 
+                                team approached trial outreach. Instead of manually reviewing trial activity logs or making sequential calls based on 
+                                signup chronology, representatives now focus exclusively on high-PQL-score leads showing multiple purchase intent signals. 
+                                Sales managers report their teams spend significantly less time on unqualified tire-kickers and more time having 
+                                substantive conversations with prospects who've already validated product-market fit through deep feature adoption.
+                            </p>
+                            
+                            <p>
+                                <strong>Conversion Rate Optimization:</strong> The scoring algorithm revealed which behaviors actually correlate with 
+                                successful conversions, challenging some prior assumptions. Analytics integration (30 points) emerged as the strongest 
+                                single predictor—users connecting their Google Analytics were 3x more likely to convert than those exploring features alone. 
+                                Support engagement (up to 90 points) indicated serious evaluation rather than just curiosity. These insights informed 
+                                product onboarding optimizations, with the team emphasizing integration setup earlier in the trial flow and proactively 
+                                offering support to high-potential users.
+                            </p>
+                            
+                            <p>
+                                <strong>Personalized Sales Engagement:</strong> Beyond just prioritizing leads, the granular behavioral metrics enabled 
+                                personalized sales conversations. Representatives could reference specific usage patterns ("I noticed you created 5 workspaces 
+                                and tracked 50 keywords—how's your SEO analysis workflow going?") rather than generic trial follow-ups. The hand-raise 
+                                detection and pricing inquiry tracking allowed immediate response to explicit purchase signals. The teammate invitation 
+                                tracking identified team-level evaluations requiring enterprise sales motion versus individual buyers suited for 
+                                self-service conversion.
+                            </p>
+                            
+                            <p>
+                                <strong>Product Intelligence Feedback Loop:</strong> The aggregated trial behavior data became a strategic asset beyond 
+                                sales qualification. Product managers analyzed feature adoption patterns to identify onboarding friction points—features 
+                                with low trial adoption despite high conversion correlation became optimization priorities. Marketing teams used PQL factor 
+                                insights to refine trial nurturing campaigns, emphasizing integration setup in automated email sequences. Executive leadership 
+                                gained visibility into trial quality trends, tracking whether marketing campaigns generated high-intent users or just 
+                                high-volume signups.
+                            </p>
+                            
+                            <p>
+                                <strong>Scalable Architecture:</strong> The modular dbt design positions Conductor for continued iteration. New behavioral 
+                                signals can be added by creating additional intermediate models without refactoring existing logic. The database-agnostic 
+                                macro layer provides migration flexibility if the team ever moves from Athena to alternative query engines. The comprehensive 
+                                test suite and documentation ensure the system remains maintainable as team members change. Most importantly, the scoring 
+                                algorithm lives in version-controlled code with full lineage tracking, creating an institutional knowledge asset that 
+                                captures evolving understanding of what makes a qualified lead.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="info-card sticky-top" style="top: 20px;">
+                            <h4 class="info-title">Project Info</h4>
+                            <ul class="info-list">
+                                <li><strong>Client:</strong> Conductor GmbH</li>
+                                <li><strong>Duration:</strong> 2 months</li>
+                                <li><strong>Role:</strong> Data Engineer</li>
+                                <li><strong>Year:</strong> Jan 2025 - Feb 2025</li>
+                            </ul>
+
+                            <h4 class="info-title mt-4">Technologies</h4>
+                            <div class="mb-3">
+                                <span class="tech-badge">dbt</span>
+                                <span class="tech-badge">SQL</span>
+                                <span class="tech-badge">Apache Airflow</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">AWS Onehouse</span>
+                                <span class="tech-badge">Apache Hudi</span>
+                                <span class="tech-badge">AWS Athena</span>
+                                <span class="tech-badge">AWS S3</span>
+                                <span class="tech-badge">AWS AppFlow</span>
+                                <span class="tech-badge">Pendo API</span>
+                                <span class="tech-badge">Zendesk API</span>
+                                <span class="tech-badge">Salesforce</span>
+                            </div>
+
+                            <a href="projects.html" class="btn btn-outline-primary w-100 mt-3">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="project-cta">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Need help with trial conversion analytics?</h2>
+                        <p class="lead">
+                            I specialize in building data-driven lead qualification systems and behavioral analytics pipelines. 
+                            Let's discuss how I can help optimize your trial-to-paid conversion funnel.
+                        </p>
+                        <a href="contact.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-envelope me-2"></i>Hire Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Usama Mazhar. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/devcard-script.js"></script>
+</body>
+</html>

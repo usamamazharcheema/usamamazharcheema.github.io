@@ -72,7 +72,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href="index.html#projects">Projects</a></li>
+                        <li class="breadcrumb-item"><a href="projects.html">Projects</a></li>
                         <li class="breadcrumb-item active">Customer Health Score Pipeline</li>
                     </ol>
                 </nav>
@@ -226,6 +226,158 @@
                                 active days, and time spent in platform. The system tracks usage patterns across CI and CWM independently and combined, 
                                 with rolling window aggregations (30/90/180/360 days) enabling trend analysis and early churn detection.
                             </p>
+                            
+                            <h4 class="mt-5 mb-3">dbt Transformation Lineage - Customer Health Score Mart</h4>
+                            <div style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); padding: 30px; border-radius: 12px; overflow-x: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                                <pre style="margin: 0; line-height: 1.6; color: #ecf0f1; font-size: 13px; font-family: 'Courier New', monospace;">
+<span style="color: #3498db; font-weight: bold;">┌─────────────────────────────────────────────────────────────────────────────────────────────┐</span>
+<span style="color: #3498db; font-weight: bold;">│</span>                    <span style="color: #f39c12; font-weight: bold;">📊 STAGING LAYER (Key Source Tables - Examples)</span>                   <span style="color: #3498db; font-weight: bold;">│</span>
+<span style="color: #3498db; font-weight: bold;">└─────────────────────────────────────────────────────────────────────────────────────────────┘</span>
+
+    <span style="color: #e74c3c;">╔════════════════════╗</span>     <span style="color: #e74c3c;">╔═══════════════════╗</span>     <span style="color: #e74c3c;">╔══════════════════╗</span>
+    <span style="color: #e74c3c;">║</span> <span style="color: #f1c40f;">Salesforce.Account</span> <span style="color: #e74c3c;">║</span>     <span style="color: #e74c3c;">║</span> <span style="color: #f1c40f;">Pendo Events</span>      <span style="color: #e74c3c;">║</span>     <span style="color: #e74c3c;">║</span> <span style="color: #f1c40f;">CDC Config</span>       <span style="color: #e74c3c;">║</span>
+    <span style="color: #e74c3c;">╠════════════════════╣</span>     <span style="color: #e74c3c;">╠═══════════════════╣</span>     <span style="color: #e74c3c;">╠══════════════════╣</span>
+    <span style="color: #e74c3c;">║</span> • id               <span style="color: #e74c3c;">║</span>     <span style="color: #e74c3c;">║</span> • account_id      <span style="color: #e74c3c;">║</span>     <span style="color: #e74c3c;">║</span> • account_id     <span style="color: #e74c3c;">║</span>
+    <span style="color: #e74c3c;">║</span> • type             <span style="color: #e74c3c;">║</span>     <span style="color: #e74c3c;">║</span> • visitor_id      <span style="color: #e74c3c;">║</span>     <span style="color: #e74c3c;">║</span> • account_type   <span style="color: #e74c3c;">║</span>
+    <span style="color: #e74c3c;">║</span> • customer_type__c <span style="color: #e74c3c;">║</span>     <span style="color: #e74c3c;">║</span> • server_time     <span style="color: #e74c3c;">║</span>     <span style="color: #e74c3c;">║</span> • trial status   <span style="color: #e74c3c;">║</span>
+    <span style="color: #e74c3c;">║</span> • account_tier__c  <span style="color: #e74c3c;">║</span>     <span style="color: #e74c3c;">║</span> • browser_time    <span style="color: #e74c3c;">║</span>     <span style="color: #e74c3c;">╚══════════════════╝</span>
+    <span style="color: #e74c3c;">╚════════════════════╝</span>     <span style="color: #e74c3c;">║</span> • page_url        <span style="color: #e74c3c;">║</span>             <span style="color: #95a5a6;">│</span>
+            <span style="color: #95a5a6;">│</span>                  <span style="color: #e74c3c;">║</span> • feature_name    <span style="color: #e74c3c;">║</span>             <span style="color: #95a5a6;">│</span>
+            <span style="color: #95a5a6;">│</span>                  <span style="color: #e74c3c;">╚═══════════════════╝</span>             <span style="color: #95a5a6;">│</span>
+            <span style="color: #95a5a6;">│</span>                          <span style="color: #95a5a6;">│</span>                     <span style="color: #95a5a6;">│</span>
+            <span style="color: #95a5a6;">└───────────┬──────────────┘</span>                     <span style="color: #95a5a6;">│</span>
+                        <span style="color: #95a5a6;">│</span>                                    <span style="color: #95a5a6;">│</span>
+                        <span style="color: #95a5a6;">▼</span>                                    <span style="color: #95a5a6;">▼</span>
+<span style="color: #3498db; font-weight: bold;">┌─────────────────────────────────────────────────────────────────────────────────────────────┐</span>
+<span style="color: #3498db; font-weight: bold;">│</span>                        <span style="color: #f39c12; font-weight: bold;">🔧 INTERMEDIATE LAYER (dbt Models)</span>                           <span style="color: #3498db; font-weight: bold;">│</span>
+<span style="color: #3498db; font-weight: bold;">└─────────────────────────────────────────────────────────────────────────────────────────────┘</span>
+
+    <span style="color: #9b59b6;">╔══════════════════════════════╗</span>
+    <span style="color: #9b59b6;">║</span> <span style="color: #2ecc71;">int_cs__ci_customer_accounts</span> <span style="color: #9b59b6;">║</span>  <span style="color: #7f8c8d;">← Links SF accounts with Pendo, filters trials</span>
+    <span style="color: #9b59b6;">╠══════════════════════════════╣</span>
+    <span style="color: #9b59b6;">║</span> • id (SF Account ID)         <span style="color: #9b59b6;">║</span>
+    <span style="color: #9b59b6;">║</span> • pendo_account_id           <span style="color: #9b59b6;">║</span>
+    <span style="color: #9b59b6;">╚══════════════════════════════╝</span>
+                <span style="color: #95a5a6;">│</span>
+                <span style="color: #95a5a6;">├────────────────┬────────────────┬────────────────┐</span>
+                <span style="color: #95a5a6;">▼</span>                <span style="color: #95a5a6;">▼</span>                <span style="color: #95a5a6;">▼</span>                <span style="color: #95a5a6;">▼</span>
+    
+    <span style="color: #9b59b6;">╔═══════════════════╗</span>  <span style="color: #9b59b6;">╔═══════════════════╗</span>  <span style="color: #9b59b6;">╔═══════════════════╗</span>  <span style="color: #9b59b6;">╔═══════════════════╗</span>
+    <span style="color: #9b59b6;">║</span> <span style="color: #2ecc71;">CI Usage 360 Days</span> <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> <span style="color: #2ecc71;">CWM Usage 360 Days</span><span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> <span style="color: #2ecc71;">New Metrics 360D</span> <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> <span style="color: #2ecc71;">Drafts Aggreg.</span>  <span style="color: #9b59b6;">║</span>
+    <span style="color: #9b59b6;">╠═══════════════════╣</span>  <span style="color: #9b59b6;">╠═══════════════════╣</span>  <span style="color: #9b59b6;">╠═══════════════════╣</span>  <span style="color: #9b59b6;">╠═══════════════════╣</span>
+    <span style="color: #9b59b6;">║</span> • active_users    <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • active_users    <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • Writing Asst    <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • L30d drafts     <span style="color: #9b59b6;">║</span>
+    <span style="color: #9b59b6;">║</span> • active_days     <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • active_days     <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • Content Guide   <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • 3/6/12mo avg    <span style="color: #9b59b6;">║</span>
+    <span style="color: #9b59b6;">║</span> • time_in_app     <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • time_in_app     <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • Pages           <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">╚═══════════════════╝</span>
+    <span style="color: #9b59b6;">║</span> • activities      <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • monitored_sites <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • Workspaces      <span style="color: #9b59b6;">║</span>
+    <span style="color: #9b59b6;">╚═══════════════════╝</span>  <span style="color: #9b59b6;">╚═══════════════════╝</span>  <span style="color: #9b59b6;">╚═══════════════════╝</span>
+            <span style="color: #95a5a6;">│</span>                      <span style="color: #95a5a6;">│</span>
+            <span style="color: #95a5a6;">▼</span>                      <span style="color: #95a5a6;">▼</span>
+    <span style="color: #9b59b6;">╔═══════════════════╗</span>  <span style="color: #9b59b6;">╔═══════════════════╗</span>      <span style="color: #9b59b6;">╔══════════════════════════╗</span>
+    <span style="color: #9b59b6;">║</span> <span style="color: #2ecc71;">CI MTD Metrics</span>    <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> <span style="color: #2ecc71;">CWM MTD Metrics</span>   <span style="color: #9b59b6;">║</span>      <span style="color: #9b59b6;">║</span> <span style="color: #2ecc71;">Combined Usage (CI+CWM)</span> <span style="color: #9b59b6;">║</span>
+    <span style="color: #9b59b6;">╠═══════════════════╣</span>  <span style="color: #9b59b6;">╠═══════════════════╣</span>      <span style="color: #9b59b6;">╠══════════════════════════╣</span>
+    <span style="color: #9b59b6;">║</span> • MTD users       <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • MTD users       <span style="color: #9b59b6;">║</span>      <span style="color: #9b59b6;">║</span> • 360d history           <span style="color: #9b59b6;">║</span>
+    <span style="color: #9b59b6;">║</span> • MTD days        <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • MTD days        <span style="color: #9b59b6;">║</span>      <span style="color: #9b59b6;">║</span> • MTD metrics            <span style="color: #9b59b6;">║</span>
+    <span style="color: #9b59b6;">║</span> • MTD time        <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • MTD time        <span style="color: #9b59b6;">║</span>      <span style="color: #9b59b6;">║</span> • Aggregations           <span style="color: #9b59b6;">║</span>
+    <span style="color: #9b59b6;">╚═══════════════════╝</span>  <span style="color: #9b59b6;">╚═══════════════════╝</span>      <span style="color: #9b59b6;">╚══════════════════════════╝</span>
+            <span style="color: #95a5a6;">│</span>                      <span style="color: #95a5a6;">│</span>                      <span style="color: #95a5a6;">│</span>
+            <span style="color: #95a5a6;">▼</span>                      <span style="color: #95a5a6;">▼</span>                      <span style="color: #95a5a6;">▼</span>
+    <span style="color: #9b59b6;">╔═══════════════════╗</span>  <span style="color: #9b59b6;">╔═══════════════════╗</span>      <span style="color: #9b59b6;">╔══════════════════════════╗</span>
+    <span style="color: #9b59b6;">║</span> <span style="color: #2ecc71;">CI Aggregation</span>    <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> <span style="color: #2ecc71;">CWM Aggregation</span>   <span style="color: #9b59b6;">║</span>      <span style="color: #9b59b6;">║</span> <span style="color: #2ecc71;">Combined Aggregation</span>     <span style="color: #9b59b6;">║</span>
+    <span style="color: #9b59b6;">╠═══════════════════╣</span>  <span style="color: #9b59b6;">╠═══════════════════╣</span>      <span style="color: #9b59b6;">╠══════════════════════════╣</span>
+    <span style="color: #9b59b6;">║</span> • 30d avg         <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • 30d avg         <span style="color: #9b59b6;">║</span>      <span style="color: #9b59b6;">║</span> • 30d avg                <span style="color: #9b59b6;">║</span>
+    <span style="color: #9b59b6;">║</span> • 90d avg         <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • 90d avg         <span style="color: #9b59b6;">║</span>      <span style="color: #9b59b6;">║</span> • 90d avg                <span style="color: #9b59b6;">║</span>
+    <span style="color: #9b59b6;">║</span> • 180d avg        <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • 180d avg        <span style="color: #9b59b6;">║</span>      <span style="color: #9b59b6;">║</span> • 180d avg               <span style="color: #9b59b6;">║</span>
+    <span style="color: #9b59b6;">║</span> • 360d avg        <span style="color: #9b59b6;">║</span>  <span style="color: #9b59b6;">║</span> • 360d avg        <span style="color: #9b59b6;">║</span>      <span style="color: #9b59b6;">║</span> • 360d avg               <span style="color: #9b59b6;">║</span>
+    <span style="color: #9b59b6;">╚═══════════════════╝</span>  <span style="color: #9b59b6;">╚═══════════════════╝</span>      <span style="color: #9b59b6;">╚══════════════════════════╝</span>
+            <span style="color: #95a5a6;">│</span>                      <span style="color: #95a5a6;">│</span>                      <span style="color: #95a5a6;">│</span>
+            <span style="color: #95a5a6;">└───────────┬──────────────┴──────────────────────┘</span>
+                        <span style="color: #95a5a6;">│</span>
+                        <span style="color: #95a5a6;">▼</span>
+        <span style="color: #9b59b6;">╔══════════════════════════════════════════════╗</span>
+        <span style="color: #9b59b6;">║</span>  <span style="color: #2ecc71;">int_cs__all_metrics_combined_aggregation</span>  <span style="color: #9b59b6;">║</span>  <span style="color: #7f8c8d;">← Merges all product metrics</span>
+        <span style="color: #9b59b6;">╠══════════════════════════════════════════════╣</span>
+        <span style="color: #9b59b6;">║</span> • account_name__c                            <span style="color: #9b59b6;">║</span>
+        <span style="color: #9b59b6;">║</span> • CI metrics (MTD, 30/90/180/360d)           <span style="color: #9b59b6;">║</span>
+        <span style="color: #9b59b6;">║</span> • CWM metrics (MTD, 30/90/180/360d)          <span style="color: #9b59b6;">║</span>
+        <span style="color: #9b59b6;">║</span> • Combined metrics (MTD, 30/90/180/360d)     <span style="color: #9b59b6;">║</span>
+        <span style="color: #9b59b6;">║</span> • Feature-level usage (WA, CG, Pages, etc.)  <span style="color: #9b59b6;">║</span>
+        <span style="color: #9b59b6;">║</span> • <span style="color: #e67e22;">Health Scores</span> (calculated via formula)      <span style="color: #9b59b6;">║</span>
+        <span style="color: #9b59b6;">╚══════════════════════════════════════════════╝</span>
+                        <span style="color: #95a5a6;">│</span>
+                        <span style="color: #95a5a6;">▼</span>
+        <span style="color: #9b59b6;">╔══════════════════════════════════════════════╗</span>
+        <span style="color: #9b59b6;">║</span>  <span style="color: #2ecc71;">int_cs__cs_health_with_catalyst_integration</span> <span style="color: #9b59b6;">║</span>  <span style="color: #7f8c8d;">← Adds Catalyst scoring</span>
+        <span style="color: #9b59b6;">╠══════════════════════════════════════════════╣</span>
+        <span style="color: #9b59b6;">║</span> • business_unit_id__c                        <span style="color: #9b59b6;">║</span>
+        <span style="color: #9b59b6;">║</span> • All aggregated metrics                     <span style="color: #9b59b6;">║</span>
+        <span style="color: #9b59b6;">║</span> • Health scores with categorization          <span style="color: #9b59b6;">║</span>
+        <span style="color: #9b59b6;">║</span> • <span style="color: #e67e22;">Catalyst Platform Health Scores</span>              <span style="color: #9b59b6;">║</span>
+        <span style="color: #9b59b6;">║</span> • <span style="color: #e67e22;">Account Health Category</span>                    <span style="color: #9b59b6;">║</span>
+        <span style="color: #9b59b6;">╚══════════════════════════════════════════════╝</span>
+                        <span style="color: #95a5a6;">│</span>
+                        <span style="color: #95a5a6;">▼</span>
+<span style="color: #3498db; font-weight: bold;">┌─────────────────────────────────────────────────────────────────────────────────────────────┐</span>
+<span style="color: #3498db; font-weight: bold;">│</span>                           <span style="color: #f39c12; font-weight: bold;">📊 FINAL MART (Salesforce Sync)</span>                             <span style="color: #3498db; font-weight: bold;">│</span>
+<span style="color: #3498db; font-weight: bold;">└─────────────────────────────────────────────────────────────────────────────────────────────┘</span>
+
+        <span style="color: #27ae60;">╔══════════════════════════════════════════════════╗</span>
+        <span style="color: #27ae60;">║</span>  <span style="color: #f1c40f;">customer_health_score__sfdc_cs_health</span>           <span style="color: #27ae60;">║</span>  <span style="color: #7f8c8d;">← Final view for Salesforce</span>
+        <span style="color: #27ae60;">╠══════════════════════════════════════════════════╣</span>
+        <span style="color: #27ae60;">║</span> <span style="color: #e67e22; font-weight: bold;">Key Fields:</span>                                        <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • Id (SF Health Score Record ID)                 <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • business_unit_id__c, account_name__c           <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • health_record_name__c (e.g., "Account - Jan")  <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • health_date__c, month_number__c                <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span>                                                  <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> <span style="color: #e67e22; font-weight: bold;">CI Platform Metrics (100+ fields):</span>                <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • active_users__c, active_days__c, time_spent__c <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • health_score_actual__c                         <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • health_score_3/6/12months_avg__c               <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span>                                                  <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> <span style="color: #e67e22; font-weight: bold;">CWM Platform Metrics:</span>                             <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • ck_active_users__c, ck_active_days__c          <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • ck_health_score_actual__c                      <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span>                                                  <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> <span style="color: #e67e22; font-weight: bold;">Combined Metrics:</span>                                 <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • combined_health_score_actual__c                <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • combined_users/days/time_3/6/12months_avg__c   <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span>                                                  <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> <span style="color: #e67e22; font-weight: bold;">Feature-Level Usage (L30D + 3/6/12mo avg):</span>       <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • writing_asst_*_time_in_platform__c             <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • content_guide_*_time_platform__c               <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • pages_*_time_in_platform__c                    <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • workspaces_*_time_platform__c                  <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • Avg_WA_Drafts_Created_Last_*_Mo__c             <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span>                                                  <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> <span style="color: #e67e22; font-weight: bold;">Catalyst Health Scores:</span>                           <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • Customer_Health_Score__c                       <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • Platform_Health_Score__c                       <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • Intelligence/Creator/Monitoring_Health_Score   <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">║</span> • Platform_Health_Category__c (Red/Yellow/Green) <span style="color: #27ae60;">║</span>
+        <span style="color: #27ae60;">╚══════════════════════════════════════════════════╝</span>
+                        <span style="color: #95a5a6;">│</span>
+                        <span style="color: #95a5a6;">▼</span>
+                <span style="color: #e74c3c;">┌────────────────────┐</span>
+                <span style="color: #e74c3c;">│</span>  <span style="color: #f39c12;">AWS AppFlow</span>     <span style="color: #e74c3c;">│</span>  <span style="color: #7f8c8d;">→ Daily sync to Salesforce Health Score Object</span>
+                <span style="color: #e74c3c;">└────────────────────┘</span>
+
+<span style="color: #95a5a6; font-style: italic;">Legend: CI = Conductor Intelligence | CWM = Conductor Web Monitoring | MTD = Month to Date</span>
+<span style="color: #95a5a6; font-style: italic;">        WA = Writing Assistant | CG = Content Guidance</span>
+                </pre>
+                            </div>
+                            
+                            <p class="mt-4">
+                                The dbt transformation layer implements a <strong>medallion architecture</strong> with 15+ intermediate models 
+                                progressively enriching data from staging through to the final Salesforce-ready mart. Key transformations include:
+                            </p>
+                            <ul class="mt-2">
+                                <li><strong>Customer filtering</strong>: Excludes trial/demo/PLG accounts using CDC config data</li>
+                                <li><strong>Temporal aggregations</strong>: Rolls up 360 days of usage into MTD, 30d, 90d, 180d, and 360d averages</li>
+                                <li><strong>Health score calculation</strong>: Custom formula combining active users, active days, and time in platform</li>
+                                <li><strong>Cross-platform analytics</strong>: Tracks CI, CWM, and combined usage independently</li>
+                                <li><strong>Feature-level insights</strong>: Granular tracking of Writing Assistant, Content Guidance, Pages, Workspaces</li>
+                                <li><strong>Catalyst integration</strong>: Applies external health categorization framework (Red/Yellow/Green)</li>
+                            </ul>
                         </div>
 
                         <!-- The Challenge -->
@@ -413,9 +565,9 @@
                             <h4 class="info-title">Project Info</h4>
                             <ul class="info-list">
                                 <li><strong>Client:</strong> Conductor GmbH</li>
-                                <li><strong>Duration:</strong> Ongoing</li>
+                                <li><strong>Duration:</strong> 2 months</li>
                                 <li><strong>Role:</strong> Data Engineer</li>
-                                <li><strong>Year:</strong> July 2025</li>
+                                <li><strong>Year:</strong> July 2025 - Aug 2025</li>
                             </ul>
 
                             <h4 class="info-title mt-4">Technologies</h4>
@@ -434,7 +586,7 @@
                                 <span class="tech-badge">REST APIs</span>
                             </div>
 
-                            <a href="index.html#projects" class="btn btn-outline-primary w-100 mt-3">
+                            <a href="projects.html" class="btn btn-outline-primary w-100 mt-3">
                                 <i class="fas fa-arrow-left me-2"></i>Back to Projects
                             </a>
                         </div>

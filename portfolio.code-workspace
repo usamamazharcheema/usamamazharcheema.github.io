@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../PycharmProjects/cdp-airflow-dag"
+		},
+		{
+			"path": "../../../PycharmProjects/cdp-extractor"
+		},
+		{
+			"path": "../../../PycharmProjects/cdp-transformer"
+		},
+		{
+			"path": "../../../PycharmProjects/cdp-job-api"
+		},
+		{
+			"path": "../../../PycharmProjects/cdp-dbt"
+		}
+	],
+	"settings": {}
+}
