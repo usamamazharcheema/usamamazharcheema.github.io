@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One-time Data Migration - Usama Mazhar</title>
+    <title>Salesforce CRM Data Migration</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/devcard-style.css">
@@ -30,7 +30,7 @@
                             <i class="fas fa-briefcase me-2"></i>Portfolio
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="display: none;">
                         <a class="nav-link" href="resume.html">
                             <i class="fas fa-file-alt me-2"></i>Resume
                         </a>
@@ -48,7 +48,7 @@
                     <a href="https://github.com/usamamazharcheema" target="_blank" class="social-link">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://linkedin.com/in/usama-mazhar" target="_blank" class="social-link">
+                    <a href="https://www.linkedin.com/in/usama-mazhar-851270149/" target="_blank" class="social-link">
                         <i class="fab fa-linkedin"></i>
                     </a>
                     <a href="mailto:usamamazhar200@gmail.com" class="social-link">
@@ -73,16 +73,14 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                         <li class="breadcrumb-item"><a href="index.html#projects">Projects</a></li>
-                        <li class="breadcrumb-item active">One-time Data Migration</li>
+                        <li class="breadcrumb-item active">Salesforce CRM Data Migration</li>
                     </ol>
                 </nav>
                 
-                <h1 class="section-title">Case Study: One-time Data Migration</h1>
+                <h1 class="section-title">Case Study: Salesforce CRM Data Migration</h1>
                 
                 <p class="project-detail-intro">
-                    Led a comprehensive data migration project to consolidate data from multiple CRM and support platforms 
-                    (Pipedrive, Planhat, and Intercom) into Salesforce, creating a unified customer data platform for 
-                    improved business operations and customer insights.
+                    Led the end-to-end migration of customer and support data from Pipedrive, Planhat, and Intercom into Salesforce, leveraging the <strong>Salesforce Bulk API</strong> for high-volume, efficient data ingestion. Developed robust Python ETL pipelines to extract, cleanse, and map data into different Salesforce objects: Leads, Accounts, Contacts, Opportunities, Tasks, Events, Campaigns, Cases, and Conversations. The use of Bulk API enabled seamless batch processing and ensured data integrity at scale. This migration resulted in a 30% reduction in customer onboarding time and empowered sales and support teams with unified, accessible data.
                 </p>
 
                 <div class="row">
@@ -92,7 +90,7 @@
                         <div class="project-section">
                             <div class="row align-items-stretch">
                                 <div class="col-md-4 mb-4 d-flex">
-                                    <img src="images/project-2.jpg" alt="Casavi GmbH" class="img-fluid rounded shadow-sm w-100" style="object-fit: cover; max-height: 350px;">
+                                    <img src="images/project-3.jpg" alt="Casavi GmbH" class="img-fluid rounded shadow-sm w-100" style="object-fit: cover; max-height: 350px;">
                                 </div>
                                 <div class="col-md-8 mb-4 d-flex flex-column">
                                     <h3 class="mb-3">Casavi GmbH</h3>
@@ -110,26 +108,126 @@
                             
                             <h4 class="mb-3">Project Requirements</h4>
                             <ul>
-                                <li>Data extraction from Pipedrive CRM, Planhat CS platform, and Intercom support system</li>
-                                <li>Advanced data transformation and cleansing using Pandas</li>
-                                <li>Custom mapping logic to align disparate data schemas</li>
-                                <li>Data validation and quality checks at every stage</li>
-                                <li>Seamless loading into Salesforce via REST API</li>
+                                <li>Complete data extraction from Pipedrive CRM, Planhat CS platform, and Intercom support system</li>
+                                <li>Migration to different Salesforce objects: Leads, Accounts, Contacts, Opportunities, Tasks, Events, Campaigns, Cases, and Conversations</li>
+                                <li>Advanced data transformation and cleansing using Python and Pandas</li>
+                                <li>Custom mapping logic to align disparate data schemas to Salesforce data models</li>
+                                <li>Data validation and quality checks at every stage of the pipeline</li>
+                                <li>Seamless loading into Salesforce via Bulk API 2.0 with proper error handling and batch processing</li>
+                                <li>Zero downtime and minimal business disruption during migration</li>
                             </ul>
+                        </div>
+
+                        <!-- ETL Architecture -->
+                        <div class="project-section">
+                            <h3>ETL Pipeline Architecture</h3>
+                            <p>
+                                The migration utilized a comprehensive ETL (Extract, Transform, Load) pipeline built entirely 
+                                in Python. The architecture ensures data integrity, traceability, and recoverability at every stage.
+                            </p>
+                            
+                            <h4 class="mt-4 mb-3">Data Flow Diagram</h4>
+                            <div style="background: linear-gradient(135deg, #54B689 0%, #3a8a65 100%); padding: 30px; border-radius: 12px; overflow-x: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                                <pre style="margin: 0; line-height: 1.8; color: #ffffff; font-size: 14px;">
+    ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+    ┃                   <span style="font-weight: bold;">📤 EXTRACT PHASE - Source Systems</span>                    ┃
+    ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+    
+    ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+    │   📊 Pipedrive  │     │   📈 Planhat    │     │  💬 Intercom    │
+    │                 │     │                 │     │                 │
+    │ • Leads         │     │ • Accounts      │     │ • Conversations │
+    │ • Deals         │     │ • Contacts      │     │ • Messages      │
+    │ • Activities    │     │ • Usage Metrics │     │ • Support Cases │
+    │ • Contacts      │     │ • Health Scores │     │ • User Profiles │
+    └────────┬────────┘     └────────┬────────┘     └────────┬────────┘
+             │                       │                       │
+             │  REST API Extraction  │                       │
+             └───────────┬───────────┴───────────┬───────────┘
+                         │                       │
+                         ▼                       ▼
+    ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+    ┃              <span style="font-weight: bold;">⚙️  TRANSFORM PHASE - Python + Pandas</span>                      ┃
+    ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+    ┃                                                                          ┃
+    ┃  1️⃣  Data Cleansing & Normalization                                     ┃
+    ┃     • Remove duplicates                                                 ┃
+    ┃     • Standardize formats (dates, phone numbers, emails)               ┃
+    ┃     • Handle null values and missing data                              ┃
+    ┃                                                                          ┃
+    ┃  2️⃣  Schema Mapping & Transformation                                    ┃
+    ┃     • Map Pipedrive Deals    → Salesforce Opportunities                ┃
+    ┃     • Map Planhat Accounts   → Salesforce Accounts                     ┃
+    ┃     • Map Intercom Users     → Salesforce Contacts/Leads               ┃
+    ┃     • Map Activities         → Tasks & Events                          ┃
+    ┃     • Map Conversations      → Cases                                   ┃
+    ┃                                                                          ┃
+    ┃  3️⃣  Relationship Preservation                                          ┃
+    ┃     • Maintain parent-child relationships                              ┃
+    ┃     • Link Contacts to Accounts                                        ┃
+    ┃     • Associate Tasks/Events to Opportunities                          ┃
+    ┃     • Connect Cases to Contacts                                        ┃
+    ┃                                                                          ┃
+    ┃  4️⃣  Data Validation & Quality Checks                                   ┃
+    ┃     • Validate required fields                                         ┃
+    ┃     • Check data type compatibility                                    ┃
+    ┃     • Verify foreign key relationships                                 ┃
+    ┃     • Generate validation reports                                      ┃
+    ┃                                                                          ┃
+    ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+                                     │
+                                     │
+                                     ▼
+    ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+    ┃               <span style="font-weight: bold;">📥 LOAD PHASE - Salesforce Objects</span>                       ┃
+    ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+    ┃                                                                          ┃
+    ┃  Loading Order (Respecting Dependencies):                              ┃
+    ┃                                                                          ┃
+    ┃  1️⃣  Accounts         → Primary business entities                       ┃
+    ┃  2️⃣  Contacts         → Linked to Accounts                              ┃
+    ┃  3️⃣  Leads            → Potential customers                             ┃
+    ┃  4️⃣  Opportunities    → Linked to Accounts & Contacts                   ┃
+    ┃  5️⃣  Campaigns        → Marketing initiatives                           ┃
+    ┃  6️⃣  Tasks            → Linked to Accounts/Contacts/Opportunities       ┃
+    ┃  7️⃣  Events           → Linked to Accounts/Contacts/Opportunities       ┃
+    ┃  8️⃣  Cases            → Support tickets linked to Contacts              ┃
+    ┃  9️⃣  Conversations    → Communication history                           ┃
+    ┃                                                                          ┃
+    ┃  📤 Load Method: Salesforce REST API (Bulk API 2.0)                    ┃
+    ┃  ♻️  Batch Processing: 200 records per batch                            ┃
+    ┃  🔄 Retry Logic: Exponential backoff for failed batches                ┃
+    ┃  📊 Progress Tracking: Real-time logging and monitoring                ┃
+    ┃                                                                          ┃
+    ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+                                     │
+                                     ▼
+                        ┌─────────────────────────┐
+                        │  ✅ Migration Complete  │
+                        │  • Data Reconciliation  │
+                        │  • Validation Reports   │
+                        │  • User Acceptance Test │
+                        └─────────────────────────┘
+                </pre>
+                            </div>
                         </div>
 
                         <!-- Project Overview -->
                         <div class="project-section">
                             <h3>Project Overview</h3>
                             <p>
-                                The migration project involved consolidating customer data from three different platforms, each 
-                                with its own data model and structure. Pipedrive stored sales pipeline and deal information, 
+                                The migration project involved consolidating customer data from three different platforms into 
+                                Salesforce's comprehensive data model. Pipedrive stored sales pipeline and deal information, 
                                 Planhat contained customer success metrics and engagement data, and Intercom held support 
                                 conversations and customer interactions.
                             </p>
                             <p>
-                                The goal was to create a unified view in Salesforce that would enable better customer relationship 
-                                management, eliminate data silos, and provide a 360-degree view of each customer's journey.
+                                The scope covered 9 critical Salesforce objects: <strong>Leads</strong> (prospective customers), 
+                                <strong>Accounts</strong> (business entities), <strong>Contacts</strong> (individual people), 
+                                <strong>Opportunities</strong> (sales deals), <strong>Tasks</strong> (action items), 
+                                <strong>Events</strong> (meetings and calls), <strong>Campaigns</strong> (marketing initiatives), 
+                                <strong>Cases</strong> (support tickets), and <strong>Conversations</strong> (communication history). 
+                                The unified data model enabled a 360-degree customer view and streamlined cross-functional workflows.
                             </p>
                         </div>
 
@@ -137,14 +235,17 @@
                         <div class="project-section">
                             <h3>The Challenge</h3>
                             <p>
-                                The primary challenges included dealing with inconsistent data formats across systems, 
-                                identifying and merging duplicate records, preserving complex relationships between entities, 
-                                and handling API rate limits while processing large volumes of data.
+                                The primary challenges included mapping three different data models to Salesforce's standard 
+                                object schema, dealing with inconsistent data formats across systems, identifying and merging 
+                                duplicate records, and preserving complex relationships between entities across 9 different 
+                                Salesforce objects.
                             </p>
                             <p>
-                                Additionally, we needed to ensure zero data loss during migration, maintain data accuracy 
-                                throughout the process, and complete the migration within a tight timeline to minimize impact 
-                                on business operations.
+                                Additional complexities arose from handling API rate limits while processing large volumes of data, 
+                                maintaining referential integrity between parent-child relationships (e.g., Accounts→Contacts→Opportunities), 
+                                ensuring zero data loss during migration, and completing the migration within a tight timeline to 
+                                minimize impact on business operations. The team also needed to validate that all historical data, 
+                                including communication logs and support case histories, were accurately preserved.
                             </p>
                         </div>
 
@@ -152,21 +253,32 @@
                         <div class="project-section">
                             <h3>The Approach & Solution</h3>
                             <p>
-                                The migration pipeline was built using Python with extensive use of Pandas for data transformation. 
-                                We implemented a phased approach:
+                                The migration pipeline was built using <strong>Python</strong> with extensive use of 
+                                <strong>Pandas</strong> for data transformation and the <strong>Salesforce REST API</strong> 
+                                for bulk data loading. We implemented a phased approach with comprehensive validation at each stage:
                             </p>
                             <ul>
-                                <li><strong>Phase 1 - Discovery:</strong> Analyzed source systems, mapped data models, and identified transformation requirements</li>
-                                <li><strong>Phase 2 - Extraction:</strong> Built connectors to extract data from Pipedrive, Planhat, and Intercom APIs</li>
-                                <li><strong>Phase 3 - Transformation:</strong> Normalized data formats, implemented deduplication logic, and mapped to Salesforce schema</li>
-                                <li><strong>Phase 4 - Validation:</strong> Performed data quality checks and reconciliation against source systems</li>
-                                <li><strong>Phase 5 - Loading:</strong> Loaded data into Salesforce with proper error handling and retry mechanisms</li>
+                                <li><strong>Phase 1 - Discovery:</strong> Analyzed source systems (Pipedrive, Planhat, Intercom), 
+                                    mapped data models to 9 Salesforce objects, and identified transformation requirements</li>
+                                <li><strong>Phase 2 - Extraction:</strong> Built Python connectors to extract data from source 
+                                    system APIs with proper authentication, rate limiting, and pagination handling</li>
+                                <li><strong>Phase 3 - Transformation:</strong> Normalized data formats, implemented deduplication 
+                                    logic using fuzzy matching, mapped source schemas to Salesforce objects (Leads, Accounts, 
+                                    Contacts, Opportunities, Tasks, Events, Campaigns, Cases, Conversations)</li>
+                                <li><strong>Phase 4 - Validation:</strong> Performed data quality checks, validated foreign key 
+                                    relationships, and conducted reconciliation against source systems</li>
+                                <li><strong>Phase 5 - Loading:</strong> Loaded data into Salesforce using Bulk API 2.0 with 
+                                    proper error handling, retry mechanisms, and dependency-aware ordering</li>
+                                <li><strong>Phase 6 - Verification:</strong> Conducted User Acceptance Testing (UAT) and 
+                                    generated comprehensive migration reports</li>
                             </ul>
                             
                             <p>
-                                We implemented custom validation rules and data cleansing algorithms to standardize data formats. 
-                                The pipeline included intelligent batch processing with throttling to stay within API limits, and 
-                                comprehensive logging to track every record through the migration process.
+                                The ETL pipeline included intelligent batch processing (200 records per batch) with throttling 
+                                to stay within Salesforce API limits, exponential backoff retry logic for failed operations, 
+                                and comprehensive logging to track every record through the migration process. Custom validation 
+                                rules ensured data quality, and the dependency-aware loading sequence preserved all relationships 
+                                between objects.
                             </p>
                         </div>
 
@@ -178,33 +290,38 @@
                                 <div class="metric-card">
                                     <h4>50,000+</h4>
                                     <p class="metric-label">Customer Records</p>
-                                    <p class="metric-desc">Successfully migrated</p>
+                                    <p class="metric-desc">Migrated across 9 Salesforce objects</p>
                                 </div>
                                 <div class="metric-card">
                                     <h4>200,000+</h4>
                                     <p class="metric-label">Interactions</p>
-                                    <p class="metric-desc">Consolidated from multiple systems</p>
+                                    <p class="metric-desc">Tasks, Events, Cases, Conversations</p>
                                 </div>
                                 <div class="metric-card">
-                                    <h4>99.8%</h4>
-                                    <p class="metric-label">Data Accuracy</p>
-                                    <p class="metric-desc">Post-migration validation</p>
+                                    <h4>30%</h4>
+                                    <p class="metric-label">Faster Onboarding</p>
+                                    <p class="metric-desc">Customer onboarding time reduction</p>
                                 </div>
                                 <div class="metric-card">
                                     <h4>Zero</h4>
                                     <p class="metric-label">Data Loss</p>
-                                    <p class="metric-desc">Complete data integrity maintained</p>
+                                    <p class="metric-desc">100% data integrity maintained</p>
                                 </div>
                             </div>
 
                             <p>
-                                The migration was completed successfully within the planned timeline. The unified customer data 
-                                in Salesforce eliminated data silos, improved cross-team collaboration, and enabled a complete 
-                                360-degree view of customer interactions and history.
+                                The migration was completed successfully within the planned 5-month timeline. The unified customer 
+                                data in Salesforce eliminated data silos across sales, customer success, and support teams. With 
+                                all data consolidated into standard Salesforce objects (Leads, Accounts, Contacts, Opportunities, 
+                                Tasks, Events, Campaigns, Cases, and Conversations), teams now have a complete 360-degree view of 
+                                customer interactions and history in one platform.
                             </p>
                             <p>
-                                Teams can now access all customer information in one place, leading to more informed decision-making, 
-                                better customer service, and improved sales efficiency.
+                                The successful migration enabled faster customer onboarding (30% reduction), improved cross-team 
+                                collaboration, more informed decision-making with complete historical context, better customer 
+                                service through unified support case tracking, and improved sales efficiency with consolidated 
+                                opportunity and activity data. The robust ETL pipeline design also serves as a reusable template 
+                                for future system integrations.
                             </p>
                         </div>
                     </div>
@@ -215,9 +332,9 @@
                             <h4 class="info-title">Project Info</h4>
                             <ul class="info-list">
                                 <li><strong>Client:</strong> Casavi GmbH</li>
-                                <li><strong>Duration:</strong> 2 months</li>
-                                <li><strong>Role:</strong> Lead Data Engineer</li>
-                                <li><strong>Year:</strong> 2022</li>
+                                <li><strong>Duration:</strong> 5 months</li>
+                                <li><strong>Role:</strong> Data Engineer</li>
+                                <li><strong>Year:</strong> Nov 2022 - Mar 2023</li>
                             </ul>
 
                             <h4 class="info-title mt-4">Technologies</h4>

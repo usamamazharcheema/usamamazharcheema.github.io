@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const formMessage = document.getElementById('formMessage');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Get form data
@@ -13,73 +13,48 @@ document.addEventListener('DOMContentLoaded', function() {
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
             
+            // Check if access key is set
+            const accessKey = formData.get('access_key');
+            if (!accessKey || accessKey === 'YOUR_ACCESS_KEY_HERE') {
+                showMessage('danger', '✗ Form configuration error. Please contact the site administrator.');
+                return;
+            }
+            
             // Show loading state
             submitBtn.classList.add('loading');
             submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
             
             // Hide any previous messages
             formMessage.style.display = 'none';
             
-            // Get form values
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const subject = formData.get('subject') || 'Contact Form Submission';
-            const message = formData.get('message');
-            
-            // Create mailto link (alternative to form service)
-            const mailtoLink = `mailto:usamamazharcheema@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-                `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-            )}`;
-            
-            // Option 1: Open email client (immediate feedback)
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            setTimeout(() => {
+            try {
+                // Send form data
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
                 submitBtn.classList.remove('loading');
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnText;
                 
-                showMessage('success', 'Your email client has been opened. Thank you for reaching out!');
-                contactForm.reset();
-            }, 1000);
-            
-            // Option 2: If you want to use Formspree or another service, uncomment below:
-            /*
-            fetch(contactForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                submitBtn.classList.remove('loading');
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalBtnText;
-                
-                if (response.ok) {
-                    showMessage('success', 'Thank you for your message! I will get back to you soon.');
+                if (response.ok && data.success) {
+                    showMessage('success', '✓ Thank you for your message! I will get back to you soon.');
                     contactForm.reset();
                 } else {
-                    return response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                            showMessage('danger', data.errors.map(error => error.message).join(', '));
-                        } else {
-                            showMessage('danger', 'Oops! There was a problem submitting your form.');
-                        }
-                    });
+                    showMessage('danger', '✗ ' + (data.message || 'There was a problem submitting your form. Please try again.'));
                 }
-            })
-            .catch(error => {
+            } catch (error) {
                 submitBtn.classList.remove('loading');
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnText;
                 
-                showMessage('danger', 'Oops! There was a problem submitting your form.');
+                showMessage('danger', '✗ Network error. Please check your connection and try again.');
                 console.error('Error:', error);
-            });
-            */
+            }
         });
     }
     
