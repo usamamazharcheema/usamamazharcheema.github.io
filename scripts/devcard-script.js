@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const animateElements = document.querySelectorAll('.skill-card, .project-card, .education-card, .timeline-item, .testimonial-card');
     animateElements.forEach((element, index) => {
         element.classList.add('fade-in-element');
-        element.style.transitionDelay = `${index * 0.1}s`;
+        element.style.transitionDelay = `${index * 0.05}s`;
         fadeInObserver.observe(element);
     });
     
