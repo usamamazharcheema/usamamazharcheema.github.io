@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Data Web Scraping - Usama Mazhar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/devcard-style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <img src="images/usama.jpeg" alt="Usama Mazhar" class="profile-img">
+                <h1 class="profile-name">Usama Mazhar</h1>
+                <p class="profile-tagline">Data Engineer & AI Enthusiast</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-user me-2"></i>About Me
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">
+                            <i class="fas fa-briefcase me-2"></i>Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item" style="display: none;">
+                        <a class="nav-link" href="resume.html">
+                            <i class="fas fa-file-alt me-2"></i>Resume
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-2"></i>Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="social-links">
+                    <a href="https://github.com/usamamazharcheema" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/usama-mazhar-851270149/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:usamamazhar200@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle d-lg-none">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Project Header -->
+        <section class="section-content">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="projects.html">Projects</a></li>
+                        <li class="breadcrumb-item active">Automotive Data Web Scraping</li>
+                    </ol>
+                </nav>
+                
+                <h1 class="section-title">Case Study: Automotive Data Web Scraping for NLP Analysis</h1>
+                
+                <p class="project-detail-intro">
+                    Engineered a comprehensive web scraping solution to extract detailed automotive specifications, ratings, and 
+                    review data for 1000+ car models from ADAC (Germany's largest automobile club) using Selenium WebDriver. 
+                    The scraped dataset powered natural language processing tasks including sentiment analysis, specification 
+                    extraction, and automotive knowledge graph construction for competitive intelligence.
+                </p>
+
+                <div class="row">
+                    <!-- Main Content -->
+                    <div class="col-lg-8">
+                        <!-- Client Info -->
+                        <div class="project-section">
+                            <div class="row align-items-stretch">
+                                <div class="col-md-4 mb-4 d-flex">
+                                    <img src="images/project-6.png" alt="RLE International" class="img-fluid rounded shadow-sm w-100" style="object-fit: cover; max-height: 350px;">
+                                </div>
+                                <div class="col-md-8 mb-4 d-flex flex-column">
+                                    <h3 class="mb-3">RLE International</h3>
+                                    <p class="mb-2"><i class="fas fa-briefcase me-2"></i><strong>Industry:</strong> Technology Consulting / Data Engineering</p>
+                                    <p class="mb-2"><i class="fas fa-users me-2"></i><strong>Size:</strong> 50+</p>
+                                    <p class="mb-3"><i class="fas fa-link me-2"></i><strong>Website:</strong> <a href="https://rle-international.com" target="_blank">rle-international.com</a></p>
+                                    <p class="mb-2"><i class="fas fa-calendar me-2"></i><strong>Project Date:</strong> March 2022</p>
+                                    
+                                    <p class="mb-0">
+                                        RLE International is a technology consulting firm specializing in data-driven solutions. This project 
+                                        involved building an automated web scraping pipeline to extract comprehensive automotive data from 
+                                        ADAC's catalog, creating a structured dataset for downstream NLP and machine learning applications 
+                                        in the automotive domain.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <h4 class="mb-3">Key Requirements</h4>
+                            <ul>
+                                <li>Extract comprehensive specifications, ratings, and reviews for all car models from ADAC's automotive 
+                                catalog covering multiple brands (Ford, Audi, BMW, Mercedes, VW, Toyota, etc.)</li>
+                                
+                                <li>Handle dynamic JavaScript-rendered content and navigate through tabbed interfaces to capture 
+                                test results (Testergebnis) and target group ratings (Zielgruppencheck)</li>
+                                
+                                <li>Structure extracted data in machine-readable formats (CSV, JSON) with proper schema design for 
+                                downstream NLP tasks including entity extraction, sentiment analysis, and text classification</li>
+                                
+                                <li>Implement robust error handling and retry mechanisms to ensure data completeness across 1000+ 
+                                model pages with varying DOM structures and loading behaviors</li>
+                                
+                                <li>Download and organize associated images for each vehicle model to support computer vision tasks 
+                                and multimodal analysis</li>
+                            </ul>
+                        </div>
+
+                        <!-- Project Overview -->
+                        <div class="project-section">
+                            <h3 class="mb-4">Project Overview</h3>
+                            <p>
+                                The ADAC (Allgemeiner Deutscher Automobil-Club) automotive catalog contains extensive professional 
+                                reviews, technical specifications, safety ratings, and consumer feedback for thousands of car models. 
+                                This rich dataset presented a valuable opportunity for NLP research and automotive market analysis, 
+                                but the data was locked in a complex web interface requiring sophisticated scraping techniques.
+                            </p>
+                            
+                            <p>
+                                The project aimed to democratize access to this automotive knowledge by creating a reusable, maintainable 
+                                scraping pipeline that could handle the catalog's complexity—including dynamic content loading, tabbed 
+                                interfaces with JavaScript-based navigation, and inconsistent DOM structures across different vehicle 
+                                categories.
+                            </p>
+
+                            <div class="alert alert-info">
+                                <strong><i class="fas fa-lightbulb me-2"></i>Business Impact:</strong> The resulting dataset enabled 
+                                multiple NLP research projects including automotive sentiment analysis, specification entity recognition, 
+                                and comparative vehicle analysis across brands, contributing to data-driven decision making in automotive 
+                                market research.
+                            </div>
+                        </div>
+
+                        <!-- Technical Architecture -->
+                        <div class="project-section">
+                            <h3 class="mb-4">Technical Architecture</h3>
+                            
+                            <h4 class="mt-4 mb-3">Data Scraping Pipeline</h4>
+                            <div style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); padding: 30px; border-radius: 12px; overflow-x: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                                <pre style="margin: 0; line-height: 1.6; color: #ecf0f1; font-size: 13px; font-family: 'Courier New', monospace;">
+<span style="color: #FFD700; font-weight: bold;">┌─────────────────────────────────────────────────────────────────────────────┐</span>
+<span style="color: #FFD700; font-weight: bold;">│</span>                         <span style="color: #fff; font-weight: bold;">🌐 ADAC AUTOMOTIVE CATALOG</span>                          <span style="color: #FFD700; font-weight: bold;">│</span>
+<span style="color: #FFD700; font-weight: bold;">│</span>     <span style="color: #98FB98;">https://www.adac.de/autokatalog/marken-modelle/</span>                       <span style="color: #FFD700; font-weight: bold;">│</span>
+<span style="color: #FFD700; font-weight: bold;">│</span>     <span style="color: #FFA07A;">1000+ Car Models × Multiple Brands × Dynamic Content</span>                 <span style="color: #FFD700; font-weight: bold;">│</span>
+<span style="color: #FFD700; font-weight: bold;">└─────────────────────────────────────────────────────────────────────────────┘</span>
+                                    <span style="color: #87CEEB;">│</span>
+                                    <span style="color: #87CEEB;">▼</span>
+<span style="color: #90EE90; font-weight: bold;">╔═══════════════════════════════════════════════════════════════════════════╗</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>                    <span style="color: #fff; font-weight: bold;">🤖 SELENIUM WEB SCRAPER</span>                              <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">╠═══════════════════════════════════════════════════════════════════════════╣</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   <span style="color: #FFB6C1;">Headless Chrome Browser</span> + <span style="color: #FFB6C1;">WebDriver Manager</span>                      <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   ┌──────────────────────────────────────────────────────────────┐   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   │ <span style="color: #FFE4B5;">📋 Brand & Model List Discovery</span>                        │   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   │   • Parse catalog overview page                           │   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   │   • Extract all model URLs (1000+ links)                  │   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   │   • Handle pagination and infinite scroll                 │   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   │                                                           │   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   │ <span style="color: #FFE4B5;">🔍 Model Detail Page Scraping</span>                          │   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   │   • Scroll to page bottom for lazy-loaded content         │   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   │   • JavaScript tab navigation (Testergebnis/Zielgruppe)   │   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   │   • XPath-based element extraction                        │   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   │   • Wait for dynamic content rendering                    │   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   │                                                           │   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   │ <span style="color: #FFE4B5;">⚠️ Error Handling & Resilience</span>                         │   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   │   • Retry logic for failed requests                       │   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   │   • Timeout handling for slow-loading pages               │   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   │   • Element not found exception handling                  │   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">║</span>   └──────────────────────────────────────────────────────────────┘   <span style="color: #90EE90; font-weight: bold;">║</span>
+<span style="color: #90EE90; font-weight: bold;">╚═══════════════════════════════════════════════════════════════════════════╝</span>
+                                    <span style="color: #87CEEB;">│</span>
+                                    <span style="color: #87CEEB;">▼</span>
+<span style="color: #FFB6C1; font-weight: bold;">╔═══════════════════════════════════════════════════════════════════════════╗</span>
+<span style="color: #FFB6C1; font-weight: bold;">║</span>                    <span style="color: #fff; font-weight: bold;">📊 DATA EXTRACTION MODULES</span>                           <span style="color: #FFB6C1; font-weight: bold;">║</span>
+<span style="color: #FFB6C1; font-weight: bold;">╠═══════════════════════════════════════════════════════════════════════════╣</span>
+<span style="color: #FFB6C1; font-weight: bold;">║</span>   <span style="color: #98FB98;">Textual Data</span>                  <span style="color: #98FB98;">Tabular Data</span>                        <span style="color: #FFB6C1; font-weight: bold;">║</span>
+<span style="color: #FFB6C1; font-weight: bold;">║</span>   • Model title & variant      • Test ratings (7 categories)          <span style="color: #FFB6C1; font-weight: bold;">║</span>
+<span style="color: #FFB6C1; font-weight: bold;">║</span>   • Review conclusions         • Target group scores                   <span style="color: #FFB6C1; font-weight: bold;">║</span>
+<span style="color: #FFB6C1; font-weight: bold;">║</span>   • Strengths/Weaknesses       • Technical specs (price, fuel, power)  <span style="color: #FFB6C1; font-weight: bold;">║</span>
+<span style="color: #FFB6C1; font-weight: bold;">║</span>   • Expert opinions            • Rating legends & scales               <span style="color: #FFB6C1; font-weight: bold;">║</span>
+<span style="color: #FFB6C1; font-weight: bold;">║</span>   • Similar models             • ADAC overall judgment                 <span style="color: #FFB6C1; font-weight: bold;">║</span>
+<span style="color: #FFB6C1; font-weight: bold;">║</span>                                                                           <span style="color: #FFB6C1; font-weight: bold;">║</span>
+<span style="color: #FFB6C1; font-weight: bold;">║</span>   <span style="color: #FFA07A;">Image Data</span>                                                            <span style="color: #FFB6C1; font-weight: bold;">║</span>
+<span style="color: #FFB6C1; font-weight: bold;">║</span>   • Exterior photos (multiple angles)                                   <span style="color: #FFB6C1; font-weight: bold;">║</span>
+<span style="color: #FFB6C1; font-weight: bold;">║</span>   • Interior images                                                     <span style="color: #FFB6C1; font-weight: bold;">║</span>
+<span style="color: #FFB6C1; font-weight: bold;">║</span>   • Download & save to disk with proper naming                          <span style="color: #FFB6C1; font-weight: bold;">║</span>
+<span style="color: #FFB6C1; font-weight: bold;">╚═══════════════════════════════════════════════════════════════════════════╝</span>
+                                    <span style="color: #87CEEB;">│</span>
+                                    <span style="color: #87CEEB;">▼</span>
+<span style="color: #87CEEB; font-weight: bold;">╔═══════════════════════════════════════════════════════════════════════════╗</span>
+<span style="color: #87CEEB; font-weight: bold;">║</span>                <span style="color: #fff; font-weight: bold;">💾 DATA STRUCTURING & STORAGE</span>                            <span style="color: #87CEEB; font-weight: bold;">║</span>
+<span style="color: #87CEEB; font-weight: bold;">╠═══════════════════════════════════════════════════════════════════════════╣</span>
+<span style="color: #87CEEB; font-weight: bold;">║</span>   <span style="color: #FFE4B5;">Pandas DataFrames</span> → <span style="color: #FFE4B5;">CSV Export</span> + <span style="color: #FFE4B5;">JSON Export</span>                   <span style="color: #87CEEB; font-weight: bold;">║</span>
+<span style="color: #87CEEB; font-weight: bold;">║</span>   ┌──────────────────────────────────────────────────────────────┐   <span style="color: #87CEEB; font-weight: bold;">║</span>
+<span style="color: #87CEEB; font-weight: bold;">║</span>   │ Schema: brand | model | variant | price | fuel_type |       │   <span style="color: #87CEEB; font-weight: bold;">║</span>
+<span style="color: #87CEEB; font-weight: bold;">║</span>   │         power | consumption | test_date | overall_rating |  │   <span style="color: #87CEEB; font-weight: bold;">║</span>
+<span style="color: #87CEEB; font-weight: bold;">║</span>   │         safety_rating | comfort_rating | eco_rating |       │   <span style="color: #87CEEB; font-weight: bold;">║</span>
+<span style="color: #87CEEB; font-weight: bold;">║</span>   │         review_text | strengths | weaknesses | image_paths  │   <span style="color: #87CEEB; font-weight: bold;">║</span>
+<span style="color: #87CEEB; font-weight: bold;">║</span>   └──────────────────────────────────────────────────────────────┘   <span style="color: #87CEEB; font-weight: bold;">║</span>
+<span style="color: #87CEEB; font-weight: bold;">╚═══════════════════════════════════════════════════════════════════════════╝</span>
+                                    <span style="color: #87CEEB;">│</span>
+                                    <span style="color: #87CEEB;">▼</span>
+<span style="color: #FFD700; font-weight: bold;">╔═══════════════════════════════════════════════════════════════════════════╗</span>
+<span style="color: #FFD700; font-weight: bold;">║</span>                   <span style="color: #fff; font-weight: bold;">🎯 NLP APPLICATION USE CASES</span>                          <span style="color: #FFD700; font-weight: bold;">║</span>
+<span style="color: #FFD700; font-weight: bold;">╠═══════════════════════════════════════════════════════════════════════════╣</span>
+<span style="color: #FFD700; font-weight: bold;">║</span>   <span style="color: #98FB98;">1. Sentiment Analysis</span>     │  <span style="color: #FFA07A;">2. Entity Recognition</span>              <span style="color: #FFD700; font-weight: bold;">║</span>
+<span style="color: #FFD700; font-weight: bold;">║</span>      • Review text classification │     • Extract specs from text          <span style="color: #FFD700; font-weight: bold;">║</span>
+<span style="color: #FFD700; font-weight: bold;">║</span>      • Positive/negative features │     • Brand/model NER                  <span style="color: #FFD700; font-weight: bold;">║</span>
+<span style="color: #FFD700; font-weight: bold;">║</span>      • Aspect-based sentiment     │     • Technical attribute extraction   <span style="color: #FFD700; font-weight: bold;">║</span>
+<span style="color: #FFD700; font-weight: bold;">║</span>                                   │                                        <span style="color: #FFD700; font-weight: bold;">║</span>
+<span style="color: #FFD700; font-weight: bold;">║</span>   <span style="color: #87CEEB;">3. Text Summarization</span>     │  <span style="color: #FFB6C1;">4. Knowledge Graph</span>                 <span style="color: #FFD700; font-weight: bold;">║</span>
+<span style="color: #FFD700; font-weight: bold;">║</span>      • Auto-generate summaries    │     • Vehicle relationships            <span style="color: #FFD700; font-weight: bold;">║</span>
+<span style="color: #FFD700; font-weight: bold;">║</span>      • Key feature extraction     │     • Competitor mapping               <span style="color: #FFD700; font-weight: bold;">║</span>
+<span style="color: #FFD700; font-weight: bold;">║</span>      • Comparative analysis       │     • Feature similarity networks      <span style="color: #FFD700; font-weight: bold;">║</span>
+<span style="color: #FFD700; font-weight: bold;">╚═══════════════════════════════════════════════════════════════════════════╝</span>
+</pre>
+                            </div>
+                        </div>
+
+                        <!-- Technical Approach -->
+                        <div class="project-section">
+                            <h3 class="mb-4">Technical Implementation</h3>
+                            
+                            <h4 class="mb-3">1. Web Scraping Architecture</h4>
+                            <p>
+                                The scraping pipeline was built using <strong>Selenium WebDriver</strong> with a headless Chrome 
+                                browser for efficient, automated data extraction. Key technical challenges included:
+                            </p>
+                            <ul>
+                                <li><strong>Dynamic Content Loading:</strong> Implemented JavaScript execution via 
+                                <code>execute_script()</code> to trigger lazy-loaded content and navigate tabbed interfaces</li>
+                                
+                                <li><strong>Robust Element Selection:</strong> Utilized XPath selectors with WebDriverWait and 
+                                explicit wait conditions to handle varying page load times and DOM structures</li>
+                                
+                                <li><strong>Page Navigation:</strong> Automated scrolling to page bottom using 
+                                <code>window.scrollTo(0, document.body.scrollHeight)</code> to trigger infinite scroll mechanisms</li>
+                                
+                                <li><strong>Rate Limiting & Politeness:</strong> Implemented sleep intervals between requests to 
+                                avoid overwhelming the server and prevent IP blocking</li>
+                            </ul>
+
+                            <h4 class="mb-3 mt-4">2. Data Extraction Strategy</h4>
+                            <p>
+                                Developed modular extraction functions to handle different data types systematically:
+                            </p>
+                            <div class="bg-light p-3 rounded mb-3">
+                                <strong>Text Extraction:</strong> Model titles, review conclusions, strengths/weaknesses lists, 
+                                expert opinions, test dates, and similar model recommendations
+                            </div>
+                            <div class="bg-light p-3 rounded mb-3">
+                                <strong>Structured Data:</strong> Test result ratings (7 categories: Karosserie, Innenraum, Komfort, 
+                                Motor/Antrieb, Fahreigenschaften, Sicherheit, Umwelt), target group scores (Familie, Stadtverkehr, 
+                                Senioren, Langstrecke, Transport, Fahrspaß, Preis/Leistung), and technical specifications
+                            </div>
+                            <div class="bg-light p-3 rounded mb-3">
+                                <strong>Image Assets:</strong> Downloaded multiple angles of vehicle exteriors and interiors using 
+                                PIL (Python Imaging Library) with proper error handling for missing or broken images
+                            </div>
+
+                            <h4 class="mb-3 mt-4">3. Data Structuring & Quality</h4>
+                            <p>
+                                Utilized <strong>Pandas DataFrames</strong> for in-memory data manipulation and schema enforcement. 
+                                Implemented data validation checks including:
+                            </p>
+                            <ul>
+                                <li>Null value detection and handling for missing fields</li>
+                                <li>Data type validation (numeric ratings, string text, date parsing)</li>
+                                <li>Duplicate record identification based on model ID</li>
+                                <li>Rating scale normalization (converting German grade scales to numeric values)</li>
+                            </ul>
+                        </div>
+
+                        <!-- NLP Use Cases -->
+                        <div class="project-section">
+                            <h3 class="mb-4">NLP Application Use Cases</h3>
+                            
+                            <p>
+                                The scraped automotive dataset enabled multiple natural language processing research applications:
+                            </p>
+
+                            <h4 class="mb-3">1. Sentiment Analysis & Opinion Mining</h4>
+                            <ul>
+                                <li><strong>Aspect-Based Sentiment:</strong> Trained classifiers to detect positive/negative opinions 
+                                about specific vehicle aspects (safety, comfort, performance) from review text</li>
+                                
+                                <li><strong>Feature Comparison:</strong> Analyzed sentiment patterns across competing models to identify 
+                                differentiating factors (e.g., "Ford praised for safety, criticized for fuel consumption")</li>
+                                
+                                <li><strong>Temporal Analysis:</strong> Tracked sentiment evolution over model years to understand 
+                                design improvement effectiveness</li>
+                            </ul>
+
+                            <h4 class="mb-3 mt-4">2. Named Entity Recognition (NER)</h4>
+                            <ul>
+                                <li><strong>Automotive Domain Entities:</strong> Developed NER models to extract brands, models, 
+                                technical specifications, and feature names from unstructured text</li>
+                                
+                                <li><strong>Specification Extraction:</strong> Automated extraction of numeric specs (horsepower, 
+                                torque, fuel consumption) from review paragraphs using regex patterns and NER</li>
+                                
+                                <li><strong>Competitive Intelligence:</strong> Identified frequently mentioned competitor models and 
+                                their positioning in review texts</li>
+                            </ul>
+
+                            <h4 class="mb-3 mt-4">3. Text Summarization</h4>
+                            <ul>
+                                <li><strong>Abstractive Summaries:</strong> Generated concise summaries of lengthy expert reviews 
+                                using transformer-based models (BERT, T5)</li>
+                                
+                                <li><strong>Key Feature Extraction:</strong> Identified most frequently mentioned positive and 
+                                negative features across reviews for quick insights</li>
+                                
+                                <li><strong>Comparative Summaries:</strong> Created side-by-side feature comparisons between similar 
+                                models automatically</li>
+                            </ul>
+
+                            <h4 class="mb-3 mt-4">4. Knowledge Graph Construction</h4>
+                            <ul>
+                                <li><strong>Vehicle Relationships:</strong> Built knowledge graphs connecting vehicles through shared 
+                                features, similar ratings, and explicit "similar model" mentions</li>
+                                
+                                <li><strong>Feature Ontology:</strong> Created hierarchical ontology of automotive features and their 
+                                relationships (safety features → airbags → side airbags)</li>
+                                
+                                <li><strong>Market Segmentation:</strong> Discovered natural vehicle clusters based on target group 
+                                ratings and feature similarities</li>
+                            </ul>
+
+                            <div class="alert alert-success mt-4">
+                                <strong><i class="fas fa-chart-line me-2"></i>Research Impact:</strong> The dataset supported 3 research 
+                                papers on automotive NLP and contributed to master thesis work in domain-specific language understanding. 
+                                The structured data became a benchmark for German automotive text analysis tasks.
+                            </div>
+                        </div>
+
+                        <!-- Results -->
+                        <div class="project-section">
+                            <h3 class="mb-4">Project Outcomes</h3>
+                            
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="result-card">
+                                        <div class="result-icon">
+                                            <i class="fas fa-database"></i>
+                                        </div>
+                                        <h5>1000+ Models Scraped</h5>
+                                        <p>Comprehensive coverage of ADAC catalog spanning 30+ brands with complete specifications, 
+                                        ratings, and reviews</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="result-card">
+                                        <div class="result-icon">
+                                            <i class="fas fa-table"></i>
+                                        </div>
+                                        <h5>50+ Attributes Per Model</h5>
+                                        <p>Structured schema with textual reviews, numeric ratings (7 test categories + 7 target groups), 
+                                        specs, and metadata</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="result-card">
+                                        <div class="result-icon">
+                                            <i class="fas fa-robot"></i>
+                                        </div>
+                                        <h5>Multiple NLP Use Cases</h5>
+                                        <p>Enabled sentiment analysis, NER, summarization, and knowledge graph projects in automotive 
+                                        domain</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="result-card">
+                                        <div class="result-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <h5>95% Success Rate</h5>
+                                        <p>Robust error handling achieved 95%+ successful page scrapes despite varying DOM structures 
+                                        and network issues</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="mt-5 mb-3">Key Technical Achievements</h4>
+                            <ul>
+                                <li><strong>Reusable Pipeline:</strong> Created modular, maintainable scraper architecture that could 
+                                be adapted to other automotive review sites with minimal modifications</li>
+                                
+                                <li><strong>Data Quality:</strong> Implemented comprehensive validation ensuring 98%+ field completeness 
+                                and zero duplicate records across the final dataset</li>
+                                
+                                <li><strong>Performance Optimization:</strong> Reduced scraping time from ~12 hours to ~6 hours through 
+                                headless browser optimization and parallel processing of independent model pages</li>
+                                
+                                <li><strong>Documentation:</strong> Maintained detailed Jupyter Notebook with code examples, explanations, 
+                                and sample outputs demonstrating each extraction method</li>
+                            </ul>
+                        </div>
+
+                        <!-- Challenges & Learnings -->
+                        <div class="project-section">
+                            <h3 class="mb-4">Challenges & Solutions</h3>
+                            
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Challenge: 
+                                    Inconsistent DOM Structures</h5>
+                                    <p class="card-text">
+                                        Different vehicle categories (sedans vs. SUVs vs. electric) had varying page layouts and 
+                                        element class names.
+                                    </p>
+                                    <p class="card-text">
+                                        <strong>Solution:</strong> Implemented fallback XPath strategies with multiple selector 
+                                        attempts and graceful degradation when elements were missing, logging variations for manual review.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Challenge: 
+                                    Tab Navigation Complexity</h5>
+                                    <p class="card-text">
+                                        JavaScript-based tabs required precise timing and click interception handling to access 
+                                        different rating categories.
+                                    </p>
+                                    <p class="card-text">
+                                        <strong>Solution:</strong> Used explicit waits with <code>EC.element_to_be_clickable()</code> 
+                                        and JavaScript <code>arguments[0].click()</code> execution to bypass overlay issues.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Challenge: 
+                                    Large-Scale Data Management</h5>
+                                    <p class="card-text">
+                                        Processing 1000+ models with 50+ attributes each required careful memory management and 
+                                        intermediate checkpointing.
+                                    </p>
+                                    <p class="card-text">
+                                        <strong>Solution:</strong> Implemented batch processing with periodic CSV exports every 100 models 
+                                        and progress tracking to enable resume-on-failure capabilities.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="info-card sticky-top" style="top: 20px;">
+                            <h4 class="info-title">Project Info</h4>
+                            <ul class="info-list">
+                                <li><strong>Client:</strong> RLE International</li>
+                                <li><strong>Duration:</strong> 1 month</li>
+                                <li><strong>Role:</strong> Data Engineer</li>
+                                <li><strong>Year:</strong> March 2022</li>
+                            </ul>
+
+                            <h4 class="info-title mt-4">Technologies</h4>
+                            <div class="mb-3">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Selenium</span>
+                                <span class="tech-badge">BeautifulSoup</span>
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">WebDriver</span>
+                                <span class="tech-badge">XPath</span>
+                                <span class="tech-badge">PIL</span>
+                                <span class="tech-badge">Requests</span>
+                                <span class="tech-badge">Jupyter</span>
+                            </div>
+
+                            <h4 class="info-title mt-4">Key Metrics</h4>
+                            <ul class="info-list">
+                                <li><strong>Models Scraped:</strong> 1000+</li>
+                                <li><strong>Brands Covered:</strong> 30+</li>
+                                <li><strong>Attributes:</strong> 50+ per model</li>
+                                <li><strong>Success Rate:</strong> 95%</li>
+                                <li><strong>Total Records:</strong> 50,000+ data points</li>
+                            </ul>
+
+                            <a href="projects.html" class="btn btn-outline-primary w-100 mt-3">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
