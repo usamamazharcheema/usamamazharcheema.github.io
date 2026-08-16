@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trial & Demo Account Automation Platform - Usama Mazhar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/devcard-style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <img src="images/usama.jpeg" alt="Usama Mazhar" class="profile-img">
+                <h1 class="profile-name">Usama Mazhar</h1>
+                <p class="profile-tagline">Data Engineer & AI Enthusiast</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-user me-2"></i>About Me
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">
+                            <i class="fas fa-briefcase me-2"></i>Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item" style="display: none;">
+                        <a class="nav-link" href="resume.html">
+                            <i class="fas fa-file-alt me-2"></i>Resume
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-2"></i>Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="social-links" style="justify-content: center;">
+                    <a href="https://github.com/usamamazharcheema" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/usama-mazhar-851270149/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:usamamazharcheema@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle d-lg-none" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Project Detail Section -->
+        <section class="section-content pt-5">
+            <div class="container-fluid">
+                <h1 class="section-title">Case Study: Trial & Demo Account Automation Platform</h1>
+
+                <p class="project-detail-intro">
+                    Built an event-driven automation platform that provisions fully configured Conductor trial and demo
+                    accounts end-to-end — from a new Salesforce opportunity to a ready-to-demo account with competitors,
+                    curated tracked-search keywords, personas, and AI Search tracking — with zero manual setup. The platform
+                    extends the existing Airflow/Job-API microservices infrastructure with a new deferrable DAG and a
+                    dedicated SQS-driven provisioning worker.
+                </p>
+
+                <div class="row">
+                    <!-- Main Content -->
+                    <div class="col-lg-8">
+                        <!-- Client Info -->
+                        <div class="project-section">
+                            <div class="row align-items-stretch">
+                                <div class="col-md-4 mb-4 d-flex">
+                                    <img src="images/trial-provisioning-hero.svg" alt="Conductor GmbH" class="img-fluid rounded shadow-sm w-100" style="object-fit: contain; max-height: 350px; background: #eaf9f2;">
+                                </div>
+                                <div class="col-md-8 mb-4 d-flex flex-column">
+                                    <h3 class="mb-3">Conductor GmbH</h3>
+                                    <p class="mb-2"><i class="fas fa-briefcase me-2"></i><strong>Industry:</strong> SaaS / Marketing Technology</p>
+                                    <p class="mb-2"><i class="fas fa-users me-2"></i><strong>Size:</strong> 200+</p>
+                                    <p class="mb-2"><i class="fas fa-link me-2"></i><strong>Website:</strong> <a href="https://conductor.com" target="_blank">conductor.com</a></p>
+                                    <p class="mb-2"><i class="fas fa-calendar me-2"></i><strong>Project Date:</strong> Dec 2025 - Mar 2026</p>
+
+                                    <p class="mb-0">
+                                        Setting up a Conductor trial or demo account was a manual, multi-hour process for
+                                        Sales Engineering: researching competitors, hand-picking tracked-search keywords,
+                                        configuring AI Search topics/personas, and provisioning the account itself. This
+                                        project automated that entire workflow, triggered directly off new Salesforce
+                                        opportunities and reusing the job-orchestration platform already built for the
+                                        Onehouse data pipelines.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <h4 class="mb-3">Project Requirements</h4>
+                            <ul>
+                                <li>Automatically detect new trial/demo opportunities from Salesforce via the dbt/Athena data mart</li>
+                                <li>Resolve per-domain regional and language metadata to support non-US prospects</li>
+                                <li>Discover relevant competitors and curate tracked-search keywords without manual research</li>
+                                <li>Auto-generate topics, brand variations, and buyer personas per prospect for AI Search tracking</li>
+                                <li>Provision a fully configured Conductor account (web properties, tracked searches, AI Search) with no manual steps</li>
+                                <li>Support both automated (event-driven) and manual/bulk (CSV batch) provisioning modes for demos</li>
+                                <li>Reuse the existing Airflow + Job API orchestration platform instead of building new infrastructure</li>
+                                <li>Alert the team on Slack immediately if provisioning fails for any account</li>
+                            </ul>
+                        </div>
+
+                        <!-- The Goal -->
+                        <div class="project-section">
+                            <h3>The Goal</h3>
+                            <p>
+                                <strong>Eliminate the manual bottleneck in trial and demo account setup</strong> so Sales
+                                Engineering and Solutions Consulting could spend time on prospect conversations instead of
+                                spreadsheet research and manual account configuration. Every new opportunity should result
+                                in a demo-ready Conductor account — with relevant competitors, keywords, and AI Search
+                                tracking already configured — within minutes of being created in Salesforce.
+                            </p>
+                            <p>
+                                The technical goal was to <strong>build this as a thin extension of the existing
+                                microservices platform</strong> rather than a bespoke pipeline: reuse the same Job API,
+                                deferrable-sensor pattern, and SQS-based worker dispatch already proven on the Onehouse
+                                data pipelines project, so the new capability could ship quickly and be operated the
+                                same way as everything else on the platform.
+                            </p>
+                        </div>
+
+                        <!-- The Solution -->
+                        <div class="project-section">
+                            <h3>The Solution</h3>
+                            <p>
+                                The platform is composed of one new orchestration DAG and one new provisioning
+                                microservice, both plugged into the shared <strong>Job API</strong> that already routes
+                                work to services via SQS. Airflow discovers opportunities and hands off one job per
+                                account; a dedicated worker service does all of the heavy lifting — discovery, keyword
+                                curation, and account provisioning — and reports status back through the same job
+                                lifecycle used across the rest of the platform.
+                            </p>
+
+                            <h4 class="mt-4 mb-3">System Architecture</h4>
+                            <div class="text-center mb-4">
+                                <img src="images/trial-provisioning-architecture.svg" alt="Trial & Demo Account Automation Platform Architecture" class="img-fluid rounded shadow" style="max-width: 100%; height: auto; background: #fff;">
+                            </div>
+                            <ul>
+                                <li><strong>cdp-airflow-dag (trials_provisioning DAG):</strong> Queries the dbt/Athena mart
+                                for new trial opportunities, resolves regional metadata per domain, and dynamically maps
+                                one <code>DeferrableJobSensor</code> task per opportunity — the same deferrable pattern
+                                used by the Onehouse pipelines, so a single worker can track hundreds of in-flight
+                                provisioning jobs without blocking Airflow slots.</li>
+                                <li><strong>cdp-job-api (shared, reused):</strong> Receives job creation calls from the
+                                DAG, writes job records, and dispatches an SQS message to the
+                                <code>cdp-trials-provisoning</code> queue. No changes were needed to this service —
+                                the new workflow is just another consumer of the existing job contract.</li>
+                                <li><strong>cdp-trials-provisoning (new worker):</strong> SQS-driven service that performs
+                                competitor/keyword discovery, topic/persona resolution, keyword curation, and the full
+                                Conductor account provisioning sequence, then reports success or failure back through
+                                the Job API.</li>
+                            </ul>
+                            <p class="text-muted">
+                                <strong>Flow:</strong> Salesforce opportunity → dbt/Athena mart → Airflow DAG → Job API →
+                                SQS → cdp-trials-provisoning worker → Conductor account (Searchlight API) → job status
+                                update → Slack alert on failure.
+                            </p>
+                        </div>
+
+                        <!-- The Challenge -->
+                        <div class="project-section">
+                            <h3>The Challenge</h3>
+                            <p>
+                                <strong>Manual, Inconsistent Setup:</strong> Provisioning a trial or demo account required
+                                a person to research the prospect's competitors, hand-pick tracked-search keywords,
+                                decide on relevant topics and personas, and click through account setup in the Conductor
+                                UI. Quality varied by who did the setup and how much time they had, and the process didn't
+                                scale as opportunity volume grew.
+                            </p>
+                            <p>
+                                <strong>Global & Multi-Locale Prospects:</strong> Prospects span multiple languages and
+                                countries, but SEO tracking configuration (search engine, language, location, locale) is
+                                region-specific. The pipeline needed to resolve the correct regional IDs per domain
+                                automatically rather than defaulting everything to US/English.
+                            </p>
+                            <p>
+                                <strong>Keyword Quality vs. Relevance:</strong> Keywords selected purely by search volume
+                                often didn't reflect where a prospect actually ranks, while keywords selected purely by
+                                current ranking missed high-value growth opportunities. Brand-name keyword expansion could
+                                also pull in noisy, unrelated results for short or ambiguous brand acronyms.
+                            </p>
+                            <p>
+                                <strong>Two Provisioning Modes:</strong> The team also needed a way to provision accounts
+                                in bulk for outbound demo campaigns (e.g., a curated list of prospects) — separate from
+                                the automatic, event-driven flow — without duplicating the provisioning logic.
+                            </p>
+                        </div>
+
+                        <!-- The Approach & Solution -->
+                        <div class="project-section">
+                            <h3>The Approach & Solution</h3>
+                            <p>
+                                I designed and built the provisioning worker and the Airflow DAG that drives it, reusing
+                                the Job API and deferrable-sensor infrastructure already in place.
+                            </p>
+
+                            <h5>1. Opportunity Discovery & Regional Resolution (Airflow)</h5>
+                            <ul>
+                                <li><strong>dbt/Athena Mart Query:</strong> The DAG queries a dbt-modeled Athena table for
+                                new trial opportunities each run, pulling account name, Salesforce ID, Clearbit-enriched
+                                domain, and owning users</li>
+                                <li><strong>Language Detection & Filtering:</strong> Calls Geppetto to detect each
+                                domain's ISO language/country before dispatch, skipping accounts with missing domains or
+                                unsupported languages rather than failing silently downstream</li>
+                                <li><strong>Regional ID Resolution:</strong> Resolves rank source, language, location, and
+                                locale IDs per domain via targeted Athena lookups (<code>rank_source_ro</code>,
+                                <code>language_ro</code>, <code>locale_ro</code>), with safe defaults if a lookup misses</li>
+                                <li><strong>Dynamic Task Mapping:</strong> Uses <code>DeferrableJobSensor.expand()</code>
+                                to fan out one job per opportunity, with a 30-second poll interval and 1-hour timeout —
+                                identical configuration to the Onehouse pipelines DAGs</li>
+                            </ul>
+
+                            <h5>2. Competitor & Keyword Discovery (cdp-trials-provisoning)</h5>
+                            <ul>
+                                <li><strong>Geppetto Integration:</strong> Resolves topics, brand name variations, and
+                                buyer personas for the domain; Salesforce-provided topics/competitors take priority, with
+                                Geppetto always queried at full capacity so deduplication never leaves empty slots</li>
+                                <li><strong>SEMrush Dual-Pool Keyword Strategy:</strong>
+                                    <ul>
+                                        <li><em>Pool A (MSV-optimized):</em> Keywords expanded from topics and brand
+                                        terms, ranked by search volume, with branded vs. non-branded slot allocation and
+                                        similarity-based deduplication (SequenceMatcher ratio &gt; 0.90 discarded)</li>
+                                        <li><em>Pool B (domain-ranked):</em> Keywords the domain already ranks for,
+                                        pulled across configurable rank-position zones for a representative spread</li>
+                                        <li><em>Merge:</em> Pools are deduplicated by normalized phrase, preferring
+                                        Pool B (has real rank data), yielding up to 200 curated keywords per account</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Smart Groups:</strong> Curated keywords are segmented into branded /
+                                non-branded smart groups mapped back to their originating topics for tracked-search
+                                organization</li>
+                            </ul>
+
+                            <h5>3. Conductor Account Provisioning</h5>
+                            <ul>
+                                <li><strong>Account Creation:</strong> Calls the Searchlight API to create a TRIAL or DEMO
+                                account with the configured subscription plan, allocation package, product IDs, and
+                                trial length (or non-expiring for demos)</li>
+                                <li><strong>Web Properties:</strong> Creates the client web property plus competitor web
+                                properties, wired to the resolved rank source</li>
+                                <li><strong>Personas:</strong> Creates custom personas from Geppetto output and associates
+                                them with the web property, falling back to defaults when none are returned</li>
+                                <li><strong>Tracked Searches:</strong> Uploads curated keywords with smart-group
+                                assignments, using the resolved locale and rank-source language for correct formatting</li>
+                                <li><strong>AI Search Tracking:</strong> Configures topics, per-topic queries, and
+                                personas across multiple AI engines (Gemini, ChatGPT, Google AI Overview, Google AI Mode,
+                                Claude Sonnet)</li>
+                            </ul>
+
+                            <h5>4. Job Lifecycle & Failure Handling</h5>
+                            <ul>
+                                <li><strong>Status Reporting:</strong> Updates job status (CREATED → PROCESSING →
+                                COMPLETED/FAILED) back through the Job API at each stage, giving the same centralized
+                                visibility as every other job-driven service on the platform</li>
+                                <li><strong>Slack Alerts:</strong> Sends a Slack notification with the failure reason the
+                                moment a provisioning run fails, instead of requiring someone to check Airflow logs</li>
+                            </ul>
+
+                            <h5>5. Manual Batch Runner</h5>
+                            <ul>
+                                <li><strong>CSV-Driven Bulk Provisioning:</strong> A local batch runner (<code>tools/test_pipeline.py</code>)
+                                reuses the exact same provisioning code path outside of SQS, reading accounts from a CSV
+                                (e.g., a Fortune 500 prospect list) for one-off demo campaigns or config testing</li>
+                                <li><strong>Config-Driven:</strong> Account type, subscription plan, allocation package,
+                                keyword/topic/persona limits, and AI engines are all set via a single config block —
+                                no code changes needed to run a different provisioning profile</li>
+                            </ul>
+                        </div>
+
+                        <!-- The Results -->
+                        <div class="project-section">
+                            <h3>The Results</h3>
+
+                            <div class="project-metrics">
+                                <div class="metric-card">
+                                    <h4>0</h4>
+                                    <p class="metric-label">Manual Steps</p>
+                                    <p class="metric-desc">Fully automated, event-driven provisioning</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>200</h4>
+                                    <p class="metric-label">Curated Keywords</p>
+                                    <p class="metric-desc">Per account, dual-pool strategy</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>5</h4>
+                                    <p class="metric-label">AI Engines Tracked</p>
+                                    <p class="metric-desc">Gemini, ChatGPT, Google AIO/AI Mode, Claude</p>
+                                </div>
+                                <div class="metric-card">
+                                    <h4>2</h4>
+                                    <p class="metric-label">Provisioning Modes</p>
+                                    <p class="metric-desc">Event-driven & CSV batch runner</p>
+                                </div>
+                            </div>
+
+                            <h4>Technical Achievements</h4>
+                            <ul>
+                                <li><strong>Platform Reuse:</strong> Shipped a new, independently deployable provisioning
+                                capability without modifying the existing Job API or deferrable-sensor infrastructure —
+                                pure extension via a new DAG and a new SQS consumer</li>
+                                <li><strong>Regional Coverage:</strong> Automatic domain-based language/region detection
+                                and Athena-backed ID resolution allow the pipeline to support international prospects
+                                without hardcoded defaults</li>
+                                <li><strong>Keyword Quality:</strong> The dual-pool (MSV + domain-ranked) merge strategy
+                                balances growth-opportunity keywords with keywords the prospect already ranks for,
+                                improving demo relevance over single-signal selection</li>
+                                <li><strong>Operational Safety:</strong> Centralized job status tracking and Slack
+                                alerting give immediate visibility into provisioning failures across every account</li>
+                                <li><strong>Reusable Batch Tooling:</strong> The same provisioning logic powers both the
+                                automated pipeline and a config-driven CSV batch runner, avoiding duplicated business logic</li>
+                            </ul>
+
+                            <h4>Business Impact</h4>
+                            <p>
+                                The platform removed a recurring manual task from Sales Engineering's workload and made
+                                trial/demo account quality consistent regardless of who or what triggered provisioning.
+                                New opportunities detected in Salesforce now flow straight through to a demo-ready
+                                Conductor account without anyone opening a spreadsheet, and the same pipeline supports
+                                ad-hoc bulk provisioning for outbound campaigns through the batch runner.
+                            </p>
+                        </div>
+
+                        <!-- Technical Deep Dive -->
+                        <div class="project-section">
+                            <h3>Technical Deep Dive</h3>
+
+                            <h4>Dual-Pool Keyword Curation</h4>
+                            <p>
+                                Pool A is built from topic and brand-term expansion via SEMrush, sorted by search volume,
+                                with a capped number of branded slots drawn from all candidates and remaining
+                                non-branded slots drawn only from topic-expansion candidates — this prevents noisy
+                                brand-expansion results (e.g., an ambiguous acronym returning unrelated gaming keywords)
+                                from crowding out topic-relevant keywords. Pool B is built from the domain's actual
+                                organic rankings, sampled across configurable rank-position zones for a representative
+                                spread of strong, medium, and weak rankings.
+                            </p>
+                            <p>
+                                The two pools are merged by normalizing each phrase (lowercase, collapsed whitespace) and
+                                preferring the Pool B version on collision, since it carries real rank-position data.
+                                This produces up to 200 keywords per account that reflect both growth opportunity and
+                                current ranking reality.
+                            </p>
+
+                            <h4>Reusing the Deferrable Sensor Pattern</h4>
+                            <p>
+                                Rather than building new orchestration primitives, the trials_provisioning DAG uses the
+                                same <code>DeferrableJobSensor</code> built for the Onehouse pipelines: it creates a job
+                                via the Job API in about a second, then immediately defers to a trigger that polls job
+                                status every 30 seconds in the triggerer process. This keeps hundreds of concurrent
+                                provisioning jobs from consuming Airflow worker slots while they wait on external API calls.
+                            </p>
+
+                            <h4>Domain-to-Region Resolution</h4>
+                            <p>
+                                For each opportunity domain, Geppetto resolves ISO language/country codes, which are then
+                                used to look up rank source, language, location, and locale IDs from Athena config
+                                tables. Non-English domains are filtered out at the DAG level before a job is even
+                                created, and every Athena lookup falls back to safe US/English defaults if a query
+                                fails, so a single bad lookup can't take down the whole batch.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="info-card sticky-top" style="top: 20px;">
+                            <h4 class="info-title">Project Info</h4>
+                            <ul class="info-list">
+                                <li><strong>Client:</strong> Conductor GmbH</li>
+                                <li><strong>Duration:</strong> ~4 months</li>
+                                <li><strong>Role:</strong> Senior Data Engineer</li>
+                                <li><strong>Year:</strong> Dec 2025 - Mar 2026</li>
+                            </ul>
+
+                            <h4 class="info-title mt-4">Technologies</h4>
+                            <div class="mb-3">
+                                <span class="tech-badge">Apache Airflow</span>
+                                <span class="tech-badge">Python 3.11</span>
+                                <span class="tech-badge">FastAPI</span>
+                                <span class="tech-badge">AWS MWAA</span>
+                                <span class="tech-badge">AWS SQS</span>
+                                <span class="tech-badge">AWS Athena</span>
+                                <span class="tech-badge">dbt</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">Microservices</span>
+                                <span class="tech-badge">Event-Driven</span>
+                                <span class="tech-badge">uv</span>
+                                <span class="tech-badge">Ruff</span>
+                            </div>
+
+                            <h4 class="info-title mt-4">Integrations</h4>
+                            <div class="mb-3">
+                                <span class="tech-badge">Salesforce</span>
+                                <span class="tech-badge">SEMrush</span>
+                                <span class="tech-badge">Geppetto</span>
+                                <span class="tech-badge">Searchlight API</span>
+                                <span class="tech-badge">Slack</span>
+                            </div>
+
+                            <a href="projects.html" class="btn btn-outline-primary w-100 mt-3">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="project-cta">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Want me to help with your project?</h2>
+                        <p class="lead">
+                            I specialize in building scalable data pipelines and microservices architectures.
+                            Let's discuss how I can help bring your data vision to life.
+                        </p>
+                        <a href="index.html#contact" class="btn btn-primary btn-lg">
+                            <i class="fas fa-envelope me-2"></i>Hire Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Usama Mazhar. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/devcard-script.js"></script>
+</body>
+</html>
