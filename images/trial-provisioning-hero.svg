@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="500" viewBox="0 0 1300 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eaf9f2"/>
+      <stop offset="100%" stop-color="#cdeee0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1300" height="500" fill="url(#bg)"/>
+
+  <!-- decorative circles -->
+  <circle cx="110" cy="440" r="140" fill="#54B689" opacity="0.08"/>
+  <circle cx="1190" cy="60" r="160" fill="#54B689" opacity="0.10"/>
+
+  <text x="650" y="80" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#22303f">Trial &amp; Demo Automation</text>
+  <text x="650" y="112" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#4a5b68">Event-driven account provisioning platform</text>
+
+  <!-- Central "account" card -->
+  <rect x="540" y="150" width="220" height="270" rx="16" fill="#ffffff"/>
+  <circle cx="650" cy="210" r="30" fill="#54B689"/>
+  <path d="M634,210 l12,12 l22,-24" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="572" y="262" width="156" height="12" rx="6" fill="#e3f3ec"/>
+  <rect x="572" y="286" width="120" height="12" rx="6" fill="#e3f3ec"/>
+  <rect x="572" y="310" width="140" height="12" rx="6" fill="#e3f3ec"/>
+  <rect x="572" y="352" width="156" height="38" rx="10" fill="#54B689"/>
+  <text x="650" y="377" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">ACCOUNT READY</text>
+
+  <!-- left node: Salesforce opportunity -->
+  <g>
+    <circle cx="230" cy="230" r="52" fill="#ffffff"/>
+    <path d="M208,244 q6,-24 24,-22 q4,-14 18,-10 q12,-8 20,4 q14,-2 12,14 q6,10 -4,18 q-2,10 -14,8 l-46,0 q-12,0 -10,-12 z" fill="#00a1e0"/>
+    <text x="230" y="304" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#22303f">New Opportunity</text>
+  </g>
+
+  <!-- left-mid node: keyword/competitor discovery -->
+  <g>
+    <circle cx="360" cy="380" r="52" fill="#ffffff"/>
+    <circle cx="348" cy="370" r="15" fill="none" stroke="#54B689" stroke-width="5"/>
+    <line x1="359" y1="381" x2="374" y2="396" stroke="#54B689" stroke-width="5" stroke-linecap="round"/>
+    <text x="360" y="454" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#22303f">Keyword Discovery</text>
+  </g>
+
+  <!-- right node: orchestration gears -->
+  <g>
+    <circle cx="1070" cy="230" r="52" fill="#ffffff"/>
+    <circle cx="1070" cy="230" r="22" fill="none" stroke="#e8a020" stroke-width="6"/>
+    <circle cx="1070" cy="230" r="6" fill="#e8a020"/>
+    <g stroke="#e8a020" stroke-width="6" stroke-linecap="round">
+      <line x1="1070" y1="200" x2="1070" y2="208"/>
+      <line x1="1070" y1="252" x2="1070" y2="260"/>
+      <line x1="1040" y1="230" x2="1048" y2="230"/>
+      <line x1="1092" y1="230" x2="1100" y2="230"/>
+    </g>
+    <text x="1070" y="304" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#22303f">Job Orchestration</text>
+  </g>
+
+  <!-- right-mid node: AI search tracking -->
+  <g>
+    <circle cx="940" cy="380" r="52" fill="#ffffff"/>
+    <path d="M922,396 l11,-32 l7,19 l6,-25 l7,38" fill="none" stroke="#54B689" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="940" y="454" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#22303f">AI Search Tracking</text>
+  </g>
+
+  <!-- connecting lines -->
+  <g stroke="#54B689" stroke-width="3" opacity="0.45" fill="none">
+    <path d="M282,235 C380,235 460,245 540,255"/>
+    <path d="M412,375 C470,360 500,340 540,320"/>
+    <path d="M1018,235 C920,235 840,245 760,255"/>
+    <path d="M888,375 C830,360 800,340 760,320"/>
+  </g>
+</svg>
